@@ -25,3 +25,12 @@ DEFAULT_LEARNING_RATE = 1e-5
 
 # Logging
 LOG_LEVEL = "INFO"
+
+# DVC Remote Storage Configuration
+# Remote storage URL for DVC data versioning
+# Can be overridden by environment variable: DVC_REMOTE_STORAGE_URL
+# Examples:
+#   - GDrive: DVC_REMOTE_STORAGE_URL = 'gdrive://folder-id'
+#   - S3: DVC_REMOTE_STORAGE_URL = 's3://bucket-name/path'
+#   - Local: DVC_REMOTE_STORAGE_URL = '/path/to/storage'
+DVC_REMOTE_STORAGE_URL = 'gdrive://1T5DKMlXdH6_5E6UB0ZltbxZizgppmCsk'
