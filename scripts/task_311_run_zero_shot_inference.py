@@ -15,9 +15,16 @@ import subprocess
 from pathlib import Path
 from dotenv import load_dotenv
 
+# Get project root directory
+project_root = Path(__file__).parent.parent
+
+# Add project root to Python path to import config
+sys.path.insert(0, str(project_root))
+
 # Load environment variables from .env file
-env_path = Path(__file__).parent.parent / '.env'
-load_dotenv(env_path)
+env_path = project_root / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
 
 # Import configuration from config.py
 try:
@@ -42,16 +49,31 @@ def main():
     print("=" * 50)
     print()
 
-    # Get paths from config
-    project_root = Path(__file__).parent.parent
-    checkpoint_path = project_root / config.DEFAULT_CHECKPOINT_PATH / "sam3_vit_h.pt"
+    # Get paths from config (project_root already set above)
+    checkpoint_dir = project_root / config.DEFAULT_CHECKPOINT_PATH
+    
+    # Try to find checkpoint file (could be sam3_vit_h.pt, sam3.pt, or other variants)
+    checkpoint_path = None
+    possible_checkpoint_names = ["sam3_vit_h.pt", "sam3.pt", "sam3_vit_l.pt", "sam3_vit_b.pt"]
+    for name in possible_checkpoint_names:
+        candidate = checkpoint_dir / name
+        if candidate.exists():
+            checkpoint_path = candidate
+            break
+    
+    if checkpoint_path is None:
+        print(f"ERROR: No checkpoint found in {checkpoint_dir}", file=sys.stderr)
+        print(f"Looked for: {', '.join(possible_checkpoint_names)}", file=sys.stderr)
+        print("Please run task 1.2.5 first to download pre-trained weights.", file=sys.stderr)
+        return 1
+    
     val_json_path = project_root / config.DEFAULT_DATA_PATH / "chicken_val.json"
     config_path = project_root / "configs" / "base_eval.yaml"
     sam3_train_script = project_root / "sam3" / "sam3" / "train" / "train.py"
 
-    # Check if checkpoint exists
-    if not check_file_exists(checkpoint_path, "Checkpoint"):
-        print("Please run task 1.2.5 first to download pre-trained weights.", file=sys.stderr)
+    # Check if checkpoint exists (already checked above, but verify)
+    if not checkpoint_path.exists():
+        print(f"ERROR: Checkpoint not found: {checkpoint_path}", file=sys.stderr)
         return 1
 
     # Check if validation JSON exists
@@ -75,14 +97,86 @@ def main():
     print(f"Config: {config_path}")
     print()
 
-    # Change to project root directory
-    os.chdir(project_root)
-
-    # Build command
+    # Change to SAM3 directory for Hydra config resolution
+    # Hydra expects configs relative to the sam3 package
+    sam3_dir = project_root / "sam3"
+    if not sam3_dir.exists():
+        print(f"ERROR: SAM3 directory not found: {sam3_dir}", file=sys.stderr)
+        return 1
+    
+    # Ensure config exists in sam3 configs directory with absolute paths
+    import shutil
+    import yaml
+    sam3_config_dir = sam3_dir / "sam3" / "train" / "configs"
+    sam3_config_dir.mkdir(parents=True, exist_ok=True)
+    config_name = "chicken_base_eval.yaml"
+    sam3_config_path = sam3_config_dir / config_name
+    
+    # Read and update config with absolute paths (preserving YAML structure)
+    try:
+        # Read as text to preserve interpolation syntax
+        with open(config_path, 'r') as f:
+            config_text = f.read()
+        
+        # Replace path values while preserving YAML structure
+        # Use string replacement to maintain interpolation references
+        config_text = config_text.replace(
+            'checkpoint_path: checkpoints/sam3.pt',
+            f'checkpoint_path: {checkpoint_path}'
+        )
+        config_text = config_text.replace(
+            'experiment_log_dir: results/zero_shot_baseline',
+            f'experiment_log_dir: {project_root / "results" / "zero_shot_baseline"}'
+        )
+        config_text = config_text.replace(
+            'coco_gt: data/chicken_val.json',
+            f'coco_gt: {val_json_path}'
+        )
+        config_text = config_text.replace(
+            'img_path: data/images',
+            f'img_path: {project_root / config.DEFAULT_DATA_PATH / "images"}'
+        )
+        config_text = config_text.replace(
+            'bpe_path: sam3/assets/bpe_simple_vocab_16e6.txt.gz',
+            f'bpe_path: {sam3_dir / "assets" / "bpe_simple_vocab_16e6.txt.gz"}'
+        )
+        
+        # Also update launcher.experiment_log_dir interpolation
+        config_text = config_text.replace(
+            'experiment_log_dir: ${paths.experiment_log_dir}',
+            f'experiment_log_dir: {project_root / "results" / "zero_shot_baseline"}'
+        )
+        
+        # Write updated config to sam3 configs directory
+        with open(sam3_config_path, 'w') as f:
+            f.write(config_text)
+        print(f"Updated config with absolute paths: {sam3_config_path}")
+    except Exception as e:
+        print(f"ERROR: Could not update config with absolute paths: {e}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
+        return 1
+    
+    # Change to sam3 directory so Hydra can resolve configs
+    original_cwd = os.getcwd()
+    original_pythonpath = os.environ.get("PYTHONPATH", "")
+    os.chdir(sam3_dir)
+    
+    # Set PYTHONPATH to include sam3 directory for Hydra config resolution
+    os.environ["PYTHONPATH"] = f"{sam3_dir}:{original_pythonpath}" if original_pythonpath else str(sam3_dir)
+    
+    # Set environment variables for config path resolution
+    os.environ["PROJECT_ROOT"] = str(project_root)
+    os.environ["SAM3_ROOT"] = str(sam3_dir)
+    
+    # Use relative path from sam3 directory
+    config_arg = f"configs/{config_name}"
+    
+    # Build command (paths are already in the config file)
     cmd = [
         sys.executable,
-        str(sam3_train_script),
-        "-c", str(config_path),
+        "sam3/train/train.py",
+        "-c", config_arg,
         "--use-cluster", "0",
         "--num-gpus", "1"
     ]
@@ -93,7 +187,7 @@ def main():
 
     try:
         # Run the evaluation
-        result = subprocess.run(cmd, check=True, cwd=project_root)
+        result = subprocess.run(cmd, check=True, cwd=str(sam3_dir))
         print()
         print("=" * 50)
         print("✓ Zero-shot inference completed successfully")
@@ -107,6 +201,13 @@ def main():
     except KeyboardInterrupt:
         print("\nERROR: Zero-shot inference interrupted by user", file=sys.stderr)
         return 1
+    finally:
+        # Restore original directory and PYTHONPATH
+        os.chdir(original_cwd)
+        if original_pythonpath:
+            os.environ["PYTHONPATH"] = original_pythonpath
+        elif "PYTHONPATH" in os.environ:
+            del os.environ["PYTHONPATH"]
 
 
 if __name__ == "__main__":

@@ -11,12 +11,20 @@ and installed via 'uv sync' before running this script.
 
 import sys
 import json
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+# Get project root directory
+project_root = Path(__file__).parent.parent
+
+# Add project root to Python path to import config
+sys.path.insert(0, str(project_root))
+
 # Load environment variables from .env file
-env_path = Path(__file__).parent.parent / '.env'
-load_dotenv(env_path)
+env_path = project_root / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
 
 # Import configuration from config.py
 try:
@@ -26,7 +34,6 @@ except ImportError:
     sys.exit(1)
 
 # Add sam3 to path for imports
-project_root = Path(__file__).parent.parent
 sam3_path = project_root / "sam3"
 if sam3_path.exists():
     sys.path.insert(0, str(sam3_path))
@@ -153,15 +160,12 @@ def log_to_wandb(metrics):
 
 def main():
     """Calculate baseline metrics from zero-shot evaluation results."""
-    import os
-    
     print("=" * 50)
     print("Task 3.1.2: Calculate Baseline Metrics")
     print("=" * 50)
     print()
     
-    # Get paths from config
-    project_root = Path(__file__).parent.parent
+    # Get paths from config (project_root already set above)
     val_json_path = project_root / config.DEFAULT_DATA_PATH / "chicken_val.json"
     results_dir = project_root / "results" / "zero_shot_baseline"
     
