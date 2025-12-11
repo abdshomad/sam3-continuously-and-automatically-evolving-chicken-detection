@@ -38,7 +38,7 @@ This phase establishes the foundational hardware and software stack required to 
 | **1.3.1** | **WandB Initialization** | Install and login to Weights & Biases: \`pip install wandb\` \`wandb login \` | \[x\] Script Created | 2025-12-12 |
 | **1.3.2** | **DVC Initialization** | Initialize DVC in the project root: \`pip install dvc\` \`dvc init\` | \[x\] Script Created | 2025-12-12 |
 | **1.3.3** | **Configure Remote Storage** | Set up the remote storage for DVC (S3, GDrive, or Shared Network Drive): \`dvc remote add \-d storage s3:///chicken-data\` | \[x\] Script Created | 2025-12-12 |
-| **1.3.4** | **Verify Logging Integration** | Run a dummy Python script importing `wandb` to ensure it can reach the dashboard servers from the training node. | \[ \] Pending |  |
+| **1.3.4** | **Verify Logging Integration** | Run a dummy Python script importing `wandb` to ensure it can reach the dashboard servers from the training node. | \[x\] Script Created | 2025-12-12 |
 
 ---
 
@@ -50,8 +50,8 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **2.1.1** | **Directory Structure Setup** | Organize data into: \`raw\_data/images/chicken/\` \`raw\_data/images/not\_chicken/\` \`raw\_data/labels/\` (matching filenames) | \[ \] Pending |  |
-| **2.1.2** | **Label Normalization** | Scan LabelMe JSONs/YOLO classes.txt. Create a mapping dictionary to merge synonymous tags (e.g., `{"rooster": "chicken", "chick": "chicken"}`). | \[ \] Pending |  |
+| **2.1.1** | **Directory Structure Setup** | Organize data into: \`raw\_data/images/chicken/\` \`raw\_data/images/not\_chicken/\` \`raw\_data/labels/\` (matching filenames) | \[x\] Script Created | 2025-12-12 |
+| **2.1.2** | **Label Normalization** | Scan LabelMe JSONs/YOLO classes.txt. Create a mapping dictionary to merge synonymous tags (e.g., `{"rooster": "chicken", "chick": "chicken"}`). | \[x\] Script Created | 2025-12-12 |
 | **2.1.3** | **Negative Sample Verification** | Ensure "Not-Chicken" images either have:  1\. No corresponding label file. 2\. An empty label file. 3\. Are located in the specific \`not\_chicken\` directory. | \[ \] Pending |  |
 
 #### **Step 2.2: Developing the `etl_processor.py` (Conversion Logic)**
