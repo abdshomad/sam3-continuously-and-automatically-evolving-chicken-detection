@@ -231,8 +231,6 @@ trainer:
         max_ann_per_img: 100000
         multiplier: 1
         training: false
-        use_text_prompts: true
-        prompt_column: text_input
       shuffle: false
       batch_size: ${scratch.val_batch_size}
       num_workers: ${scratch.num_val_workers}
