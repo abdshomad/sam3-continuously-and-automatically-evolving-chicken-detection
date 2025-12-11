@@ -1,0 +1,5 @@
+outs:
+- md5: 6a37af0978fad574e2ba0e69748d3c6e
+  size: 384358
+  hash: md5
+  path: chicken_train.json

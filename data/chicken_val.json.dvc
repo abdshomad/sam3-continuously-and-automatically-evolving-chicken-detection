@@ -1,0 +1,5 @@
+outs:
+- md5: 4153ed1cc21618468866610747de7856
+  size: 96430
+  hash: md5
+  path: chicken_val.json
