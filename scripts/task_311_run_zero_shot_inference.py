@@ -12,8 +12,12 @@ and installed via 'uv sync' before running this script.
 import sys
 import os
 import subprocess
+import warnings
 from pathlib import Path
 from dotenv import load_dotenv
+
+# Suppress pkg_resources deprecation warning from SAM3
+warnings.filterwarnings('ignore', category=UserWarning, message='.*pkg_resources.*')
 
 # Get project root directory
 project_root = Path(__file__).parent.parent
@@ -169,6 +173,13 @@ def main():
     # Set environment variables for config path resolution
     os.environ["PROJECT_ROOT"] = str(project_root)
     os.environ["SAM3_ROOT"] = str(sam3_dir)
+    
+    # Suppress pkg_resources deprecation warnings from SAM3
+    pythonwarnings = os.environ.get("PYTHONWARNINGS", "")
+    if pythonwarnings:
+        os.environ["PYTHONWARNINGS"] = f"{pythonwarnings},ignore::UserWarning:sam3.model_builder"
+    else:
+        os.environ["PYTHONWARNINGS"] = "ignore::UserWarning:sam3.model_builder"
     
     # Use relative path from sam3 directory
     config_arg = f"configs/{config_name}"
