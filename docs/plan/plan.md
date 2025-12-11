@@ -116,8 +116,8 @@ This phase establishes the foundational hardware and software stack required to 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
 | **3.3.1** | **Configure Learning Rate** | Set a conservative LR schedule to protect the backbone: \`optimizer.lr: 1e-5\` \`scheduler: "cosine\_with\_warmup"\` | \[x\] Script Created | 2025-12-12 |
-| **3.3.2** | **Engineer Loss Weights** | **CRITICAL:** Boost the Focal Loss to penalize hallucinations. \`loss.focal\_loss\_weight: 5.0\` (High priority for Presence) \`loss.dice\_loss\_weight: 1.0\` \`loss.iou\_loss\_weight: 1.0\` | \[ \] Pending |  |
-| **3.3.3** | **Freeze Backbone** | Set `model.backbone.freeze: True`. This limits gradients to the Mask Decoder and Presence Head, saving VRAM and training time. | \[ \] Pending |  |
+| **3.3.2** | **Engineer Loss Weights** | **CRITICAL:** Boost the Focal Loss to penalize hallucinations. \`loss.focal\_loss\_weight: 5.0\` (High priority for Presence) \`loss.dice\_loss\_weight: 1.0\` \`loss.iou\_loss\_weight: 1.0\` | \[x\] Script Created | 2025-12-12 |
+| **3.3.3** | **Freeze Backbone** | Set `model.backbone.freeze: True`. This limits gradients to the Mask Decoder and Presence Head, saving VRAM and training time. | \[x\] Script Created | 2025-12-12 |
 
 ---
 
@@ -133,7 +133,7 @@ This phase executes the training process defined in **PRD Chapter 5**, applying 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **4.1.1** | **Local Training Launch (Debugging)** | Run a short sanity check (1 epoch) locally to verify data loading: \`python sam3/train/train.py \-c configs/sam3\_chicken\_finetune.yaml \--use-cluster 0 \--num-gpus 1 train.max\_epochs=1\` | \[ \] Pending |  |
+| **4.1.1** | **Local Training Launch (Debugging)** | Run a short sanity check (1 epoch) locally to verify data loading: \`python sam3/train/train.py \-c configs/sam3\_chicken\_finetune.yaml \--use-cluster 0 \--num-gpus 1 train.max\_epochs=1\` | \[x\] Script Created | 2025-12-12 |
 | **4.1.2** | **Cluster Training Launch (Production)** | Submit the full training job via SLURM/Submitit: \`python sam3/train/train.py \-c configs/sam3\_chicken\_finetune.yaml \--use-cluster 1 \--num-nodes 1 \--num-gpus 4\` | \[ \] Pending |  |
 | **4.1.3** | **Batch Size Tuning** | Monitor VRAM usage via `nvidia-smi`. If utilization \< 80%, increase `train.batch_size` in the config. If OOM (Out of Memory) occurs, decrease batch size and enable `train.accumulate_grad_batches=2`. | \[ \] Pending |  |
 
