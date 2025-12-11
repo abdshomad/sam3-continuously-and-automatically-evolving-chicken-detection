@@ -1,3 +1,6 @@
 [submodule "sam3"]
 	path = sam3
 	url = https://github.com/facebookresearch/sam3.git
+[submodule "data/chicken-detection-labelme-format"]
+	path = data/chicken-detection-labelme-format
+	url = https://github.com/abdshomad/chicken-detection-labelme-format.git

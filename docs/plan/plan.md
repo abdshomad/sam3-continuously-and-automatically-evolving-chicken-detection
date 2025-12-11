@@ -52,7 +52,7 @@ This phase establishes the foundational hardware and software stack required to 
 | :---- | :---- | :---- | :---- | :---- |
 | **2.1.1** | **Directory Structure Setup** | Organize data into: \`raw\_data/images/chicken/\` \`raw\_data/images/not\_chicken/\` \`raw\_data/labels/\` (matching filenames) | \[x\] Script Created | 2025-12-12 |
 | **2.1.2** | **Label Normalization** | Scan LabelMe JSONs/YOLO classes.txt. Create a mapping dictionary to merge synonymous tags (e.g., `{"rooster": "chicken", "chick": "chicken"}`). | \[x\] Script Created | 2025-12-12 |
-| **2.1.3** | **Negative Sample Verification** | Ensure "Not-Chicken" images either have:  1\. No corresponding label file. 2\. An empty label file. 3\. Are located in the specific \`not\_chicken\` directory. | \[ \] Pending |  |
+| **2.1.3** | **Negative Sample Verification** | Ensure "Not-Chicken" images either have:  1\. No corresponding label file. 2\. An empty label file. 3\. Are located in the specific \`not\_chicken\` directory. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 2.2: Developing the `etl_processor.py` (Conversion Logic)**
 
@@ -60,8 +60,8 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **2.2.1** | **Image Metadata Extraction** | Script must read image height/width.  \*\*Crucial:\*\* Set \`text\_input: "chicken"\` for \*every\* image (both positive and negative) in the \`images\` list. | \[ \] Pending |  |
-| **2.2.2** | **YOLO BBox to Polygon Conversion** | For YOLO .txt inputs: Use `cv2` or `shapely` to convert normalized `[x,y,w,h]` into a 4-point polygon `[[x1,y1, x2,y1, x2,y2, x1,y2]]`. SAM 3 prefers polygons over simple boxes. | \[ \] Pending |  |
+| **2.2.1** | **Image Metadata Extraction** | Script must read image height/width.  \*\*Crucial:\*\* Set \`text\_input: "chicken"\` for \*every\* image (both positive and negative) in the \`images\` list. | \[x\] Script Created | 2025-12-12 |
+| **2.2.2** | **YOLO BBox to Polygon Conversion** | For YOLO .txt inputs: Use `cv2` or `shapely` to convert normalized `[x,y,w,h]` into a 4-point polygon `[[x1,y1, x2,y1, x2,y2, x1,y2]]`. SAM 3 prefers polygons over simple boxes. | \[x\] Script Created | 2025-12-12 |
 | **2.2.3** | **LabelMe Parsing** | Parse `points` from JSON. Convert to flat list format `[x1, y1, x2, y2, ...]` required by SA-Co segmentation field. | \[ \] Pending |  |
 | **2.2.4** | **Exhaustiveness Flagging** | Set `is_instance_exhaustive: true` (or `1`) for all images to instruct the loss function that unannotated regions are true backgrounds. | \[ \] Pending |  |
 
