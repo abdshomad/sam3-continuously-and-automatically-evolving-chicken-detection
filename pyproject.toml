@@ -36,6 +36,7 @@ dependencies = [
     
     # MLOps & Experiment Tracking
     "wandb>=0.15.0",
+    "tensorboard>=2.14.0",
     "dvc>=3.0.0",
     "dvc-s3>=3.0.0",
     "dvc-gdrive>=3.0.0",
