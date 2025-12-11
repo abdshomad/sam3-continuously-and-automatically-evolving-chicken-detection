@@ -1,4 +1,3 @@
-# @package _global_
 defaults:
 - _self_
 paths:
@@ -168,7 +167,7 @@ scratch:
     dict_key: chicken
     with_seg_masks: ${scratch.enable_segmentation}
   gradient_accumulation_steps: 1
-  train_batch_size: 4
+  train_batch_size: 8
   collate_fn:
     _target_: sam3.train.data.collator.collate_fn_api
     _partial_: true
