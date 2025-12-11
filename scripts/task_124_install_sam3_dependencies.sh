@@ -56,35 +56,41 @@ fi
 echo "Installing SAM 3 dependencies..."
 echo ""
 
-# Install numpy first with compatible version (numpy==1.26 may not be available, use 1.26.x)
-echo "Step 1: Installing numpy (compatible version)..."
-if pip install "numpy>=1.26.0,<1.27.0"; then
-    echo "✓ numpy installed"
+# Install numpy first with compatible version (numpy==1.26 doesn't exist, use 1.26.4)
+echo "Step 1: Installing numpy (compatible version 1.26.4)..."
+if pip install "numpy==1.26.4"; then
+    echo "✓ numpy 1.26.4 installed"
 else
-    echo "⚠ WARNING: Failed to install numpy, continuing anyway..."
-fi
-echo ""
-
-# Install SAM 3 in editable mode
-echo "Step 2: Installing SAM 3 package (editable mode)..."
-if pip install -e sam3/; then
-    echo "✓ SAM 3 package installed"
-else
-    echo "ERROR: Failed to install SAM 3 package"
-    echo ""
-    echo "This may be due to dependency conflicts. Trying to install with --no-deps first..."
-    # Try installing without dependencies first, then install dependencies separately
-    if pip install --no-deps -e sam3/ && pip install timm tqdm "ftfy==6.1.1" regex iopath typing_extensions huggingface_hub; then
-        echo "✓ SAM 3 package installed (with manual dependency installation)"
-    else
-        echo "ERROR: Failed to install SAM 3 package even with manual dependency installation"
+    echo "⚠ WARNING: Failed to install numpy 1.26.4, trying latest 1.26.x..."
+    if ! pip install "numpy>=1.26.0,<1.27.0"; then
+        echo "ERROR: Failed to install numpy"
         exit 1
     fi
 fi
 echo ""
 
+# Install SAM 3 dependencies first (since numpy==1.26 requirement is too strict)
+echo "Step 2: Installing SAM 3 core dependencies..."
+if pip install timm "tqdm" "ftfy==6.1.1" regex "iopath>=0.1.10" typing_extensions huggingface_hub; then
+    echo "✓ SAM 3 core dependencies installed"
+else
+    echo "ERROR: Failed to install SAM 3 core dependencies"
+    exit 1
+fi
+echo ""
+
+# Install SAM 3 in editable mode with --no-deps to bypass strict numpy==1.26 requirement
+echo "Step 3: Installing SAM 3 package (editable mode, bypassing strict numpy requirement)..."
+if pip install --no-deps -e sam3/; then
+    echo "✓ SAM 3 package installed"
+else
+    echo "ERROR: Failed to install SAM 3 package"
+    exit 1
+fi
+echo ""
+
 # Install additional dependencies
-echo "Step 3: Installing additional dependencies (hydra-core, submitit)..."
+echo "Step 4: Installing additional dependencies (hydra-core, submitit)..."
 if pip install hydra-core submitit; then
     echo "✓ Additional dependencies installed"
 else
