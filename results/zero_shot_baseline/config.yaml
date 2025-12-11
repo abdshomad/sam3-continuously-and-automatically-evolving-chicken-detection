@@ -6,10 +6,10 @@ paths:
   metaclip_img_path: <YOUR_METACLIP_IMG_DIR>
   sa1b_img_path: <YOUR_SA1B_IMG_DIR>
   silver_img_path: <YOUR_SILVER_IMG_DIR>
-  bpe_path: /home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/sam3/assets/bpe_simple_vocab_16e6.txt.gz
+  bpe_path: /home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/sam3/sam3/assets/bpe_simple_vocab_16e6.txt.gz
   experiment_log_dir: /home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/results/zero_shot_baseline
   coco_gt: /home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/data/chicken_val.json
-  img_path: /home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/data/images
+  img_path: /home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/data
 scratch:
   use_presence_eval: true
   base_val_transform:

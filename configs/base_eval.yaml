@@ -10,8 +10,8 @@ paths:
   checkpoint_path: checkpoints/sam3.pt  # Will be overridden via command line
   experiment_log_dir: results/zero_shot_baseline  # Will be overridden via command line
   coco_gt: data/chicken_val.json  # Will be overridden via command line
-  img_path: data/images  # Will be overridden via command line
-  bpe_path: sam3/assets/bpe_simple_vocab_16e6.txt.gz  # Will be overridden via command line
+  img_path: data  # Will be overridden via command line - images are referenced relative to this
+  bpe_path: sam3/sam3/assets/bpe_simple_vocab_16e6.txt.gz  # Will be overridden via command line
 
 # ============================================================================
 # Trainer Configuration

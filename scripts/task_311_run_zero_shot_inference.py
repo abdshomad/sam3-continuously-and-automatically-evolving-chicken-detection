@@ -132,13 +132,14 @@ def main():
             'coco_gt: data/chicken_val.json',
             f'coco_gt: {val_json_path}'
         )
+        # Image path should be the data directory root since file_name in JSON is relative
         config_text = config_text.replace(
-            'img_path: data/images',
-            f'img_path: {project_root / config.DEFAULT_DATA_PATH / "images"}'
+            'img_path: data',
+            f'img_path: {project_root / config.DEFAULT_DATA_PATH}'
         )
         config_text = config_text.replace(
-            'bpe_path: sam3/assets/bpe_simple_vocab_16e6.txt.gz',
-            f'bpe_path: {sam3_dir / "assets" / "bpe_simple_vocab_16e6.txt.gz"}'
+            'bpe_path: sam3/sam3/assets/bpe_simple_vocab_16e6.txt.gz',
+            f'bpe_path: {sam3_dir / "sam3" / "assets" / "bpe_simple_vocab_16e6.txt.gz"}'
         )
         
         # Also update launcher.experiment_log_dir interpolation
