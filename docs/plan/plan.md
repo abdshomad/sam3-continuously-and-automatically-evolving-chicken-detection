@@ -96,7 +96,7 @@ This phase establishes the foundational hardware and software stack required to 
 | :---- | :---- | :---- | :---- | :---- |
 | **3.1.1** | **Run Zero-Shot Inference** | Execute the evaluation script using the base checkpoint: \`python sam3/eval/evaluate.py \--config configs/base\_eval.yaml \--checkpoint checkpoints/sam3\_vit\_h.pt \--json data/chicken\_val.json\` | \[x\] Script Created | 2025-12-12 |
 | **3.1.2** | **Calculate Baseline Metrics** | Log the initial scores: 1\. \*\*pmF1:\*\* (Likely high for generic objects) 2\. \*\*IL\_MCC:\*\* (Likely low/random, as the model may hallucinate chickens in empty barns). 3\. \*\*CGF1:\*\* (Composite score). | \[x\] Script Created | 2025-12-12 |
-| **3.1.3** | **Analyze False Positives** | Manually inspect the "Not-Chicken" subset results. Confirm if the model detects background objects (straw, feeders) as chickens. This confirms the need for fine-tuning. | \[ \] Pending |  |
+| **3.1.3** | **Analyze False Positives** | Manually inspect the "Not-Chicken" subset results. Confirm if the model detects background objects (straw, feeders) as chickens. This confirms the need for fine-tuning. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 3.2: Constructing the Hydra Configuration (`.yaml`)**
 
@@ -104,8 +104,8 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **3.2.1** | **Create Experiment Config** | Create `configs/sam3_chicken_finetune.yaml`. Inherit from the default fine-tuning config (e.g., `defaults: [roboflow_v100_ft]`). | \[ \] Pending |  |
-| **3.2.2** | **Define Dataset Paths** | Update the `dataset` block: \`train\_json: "data/chicken\_train.json"\` \`val\_json: "data/chicken\_val.json"\` \`img\_dir: "data/images"\` | \[ \] Pending |  |
+| **3.2.1** | **Create Experiment Config** | Create `configs/sam3_chicken_finetune.yaml`. Inherit from the default fine-tuning config (e.g., `defaults: [roboflow_v100_ft]`). | \[x\] Script Created | 2025-12-12 |
+| **3.2.2** | **Define Dataset Paths** | Update the `dataset` block: \`train\_json: "data/chicken\_train.json"\` \`val\_json: "data/chicken\_val.json"\` \`img\_dir: "data/images"\` | \[x\] Script Created | 2025-12-12 |
 | **3.2.3** | **Set Prompt Mode** | Ensure the data loader is configured for PCS: \`use\_text\_prompts: True\` \`prompt\_column: "text\_input"\` | \[ \] Pending |  |
 | **3.2.4** | **Hardware Optimization** | Enable memory savers in config: \`model.use\_gradient\_checkpointing: True\` \`trainer.precision: "bf16"\` (if A100) or \`"fp16"\` (if V100/RTX). | \[ \] Pending |  |
 
