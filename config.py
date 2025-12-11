@@ -9,6 +9,11 @@ For secrets and credentials, use the .env file.
 PROJECT_NAME = "sam3-chicken-detection"
 WANDB_PROJECT_NAME = "chicken-detection"
 
+# WandB Settings
+# Set to True to enable WandB logging, False to disable (default: OFF)
+# Can be overridden by environment variable: USE_WANDB=true or USE_WANDB=false
+USE_WANDB = False
+
 # Paths
 DEFAULT_CHECKPOINT_PATH = "./checkpoints"
 DEFAULT_DATA_PATH = "./data"

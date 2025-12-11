@@ -95,6 +95,29 @@ def main():
     print("=" * 50)
     print("")
     
+    # Check if WandB is enabled in config
+    use_wandb = getattr(config, 'USE_WANDB', False)
+    
+    # Allow override from environment variable
+    env_use_wandb = os.getenv('USE_WANDB', '').lower()
+    if env_use_wandb in ('true', '1', 'yes', 'on'):
+        use_wandb = True
+    elif env_use_wandb in ('false', '0', 'no', 'off'):
+        use_wandb = False
+    
+    if not use_wandb:
+        print("WandB is disabled in configuration (USE_WANDB=False)")
+        print("")
+        print("To enable WandB:")
+        print("  1. Set USE_WANDB=True in config.py, or")
+        print("  2. Set USE_WANDB=true in .env file")
+        print("")
+        print("Skipping WandB initialization.")
+        return 0
+    
+    print("WandB is enabled. Proceeding with initialization...")
+    print("")
+    
     # Try to add venv to path first (in case packages are already installed)
     add_venv_to_path()
     
