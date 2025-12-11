@@ -62,8 +62,8 @@ This phase establishes the foundational hardware and software stack required to 
 | :---- | :---- | :---- | :---- | :---- |
 | **2.2.1** | **Image Metadata Extraction** | Script must read image height/width.  \*\*Crucial:\*\* Set \`text\_input: "chicken"\` for \*every\* image (both positive and negative) in the \`images\` list. | \[x\] Script Created | 2025-12-12 |
 | **2.2.2** | **YOLO BBox to Polygon Conversion** | For YOLO .txt inputs: Use `cv2` or `shapely` to convert normalized `[x,y,w,h]` into a 4-point polygon `[[x1,y1, x2,y1, x2,y2, x1,y2]]`. SAM 3 prefers polygons over simple boxes. | \[x\] Script Created | 2025-12-12 |
-| **2.2.3** | **LabelMe Parsing** | Parse `points` from JSON. Convert to flat list format `[x1, y1, x2, y2, ...]` required by SA-Co segmentation field. | \[ \] Pending |  |
-| **2.2.4** | **Exhaustiveness Flagging** | Set `is_instance_exhaustive: true` (or `1`) for all images to instruct the loss function that unannotated regions are true backgrounds. | \[ \] Pending |  |
+| **2.2.3** | **LabelMe Parsing** | Parse `points` from JSON. Convert to flat list format `[x1, y1, x2, y2, ...]` required by SA-Co segmentation field. | \[x\] Script Created | 2025-12-12 |
+| **2.2.4** | **Exhaustiveness Flagging** | Set `is_instance_exhaustive: true` (or `1`) for all images to instruct the loss function that unannotated regions are true backgrounds. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 2.3: Implementing Explicit Negative Mining (The "Not-Chicken" Logic)**
 
@@ -71,7 +71,7 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **2.3.1** | **Negative Image Processing** | Condition: If image is in `not_chicken` folder OR has 0 annotations. Action: Add to \`images\` list with \`text\_input: "chicken"\`. \*\*Do NOT\*\* add any entry to \`annotations\` list. | \[ \] Pending |  |
+| **2.3.1** | **Negative Image Processing** | Condition: If image is in `not_chicken` folder OR has 0 annotations. Action: Add to \`images\` list with \`text\_input: "chicken"\`. \*\*Do NOT\*\* add any entry to \`annotations\` list. | \[x\] Script Created | 2025-12-12 |
 | **2.3.2** | **Ambiguous Class Exclusion** | If the dataset contains "ambiguous" classes (e.g., "unknown bird") that are neither clearly chicken nor clearly background, exclude these images to prevent confusing the model. | \[ \] Pending |  |
 
 #### **Step 2.4: JSON Validation & Dataset Splitting**
