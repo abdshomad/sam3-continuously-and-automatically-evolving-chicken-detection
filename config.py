@@ -12,7 +12,7 @@ WANDB_PROJECT_NAME = "chicken-detection"
 # WandB Settings
 # Set to True to enable WandB logging, False to disable (default: OFF)
 # Can be overridden by environment variable: USE_WANDB=true or USE_WANDB=false
-USE_WANDB = False
+USE_WANDB = True
 
 # Paths
 DEFAULT_CHECKPOINT_PATH = "./checkpoints"
