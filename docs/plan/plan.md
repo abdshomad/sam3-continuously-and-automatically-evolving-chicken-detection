@@ -144,8 +144,8 @@ This phase executes the training process defined in **PRD Chapter 5**, applying 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
 | **4.2.1** | **Monitor Focal Loss (Presence)** | Check the `loss_focal` curve in WandB. It should decrease steadily.  \*\*Risk:\*\* If it stays flat, the model is ignoring the "Not-Chicken" samples. Increase \`loss.focal\_loss\_weight\`. | \[x\] Script Created | 2025-12-12 |
-| **4.2.2** | **Monitor Dice/IoU Loss (Masks)** | Check `loss_dice` and `loss_iou`. These should decrease only for positive samples. | \[ \] Pending |  |
-| **4.2.3** | **Watch Gradient Norms** | Monitor `grad_norm`. Spikes indicate instability. If observed, lower the Learning Rate (`optimizer.lr`) or increase Warm-up steps. | \[ \] Pending |  |
+| **4.2.2** | **Monitor Dice/IoU Loss (Masks)** | Check `loss_dice` and `loss_iou`. These should decrease only for positive samples. | \[x\] Script Created | 2025-12-12 |
+| **4.2.3** | **Watch Gradient Norms** | Monitor `grad_norm`. Spikes indicate instability. If observed, lower the Learning Rate (`optimizer.lr`) or increase Warm-up steps. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 4.3: Checkpointing & Artifact Management**
 
@@ -153,7 +153,7 @@ This phase executes the training process defined in **PRD Chapter 5**, applying 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **4.3.1** | **Configure Checkpoint Callback** | Ensure Hydra config saves top-k checkpoints based on validation loss: \`checkpoint.monitor: "val\_loss"\` \`checkpoint.save\_top\_k: 3\` | \[ \] Pending |  |
+| **4.3.1** | **Configure Checkpoint Callback** | Ensure Hydra config saves top-k checkpoints based on validation loss: \`checkpoint.monitor: "val\_loss"\` \`checkpoint.save\_top\_k: 3\` | \[x\] Script Created | 2025-12-12 |
 | **4.3.2** | **Register Artifacts** | Upon training completion, tag the best checkpoint (`best.pt`) in the Model Registry (or WandB Artifacts) with the DVC Commit Hash used for training. | \[ \] Pending |  |
 | **4.3.3** | **Archive Config** | Save the resolved `config.yaml` alongside the model weights to ensure the experiment is reproducible. | \[ \] Pending |  |
 
