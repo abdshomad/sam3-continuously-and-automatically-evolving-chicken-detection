@@ -38,6 +38,7 @@ dependencies = [
     "wandb>=0.15.0",
     "dvc>=3.0.0",
     "dvc-s3>=3.0.0",
+    "dvc-gdrive>=3.0.0",
     
     # Data Processing
     "numpy>=1.24.0",

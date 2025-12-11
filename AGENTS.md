@@ -34,7 +34,16 @@ For each of the 3 selected tasks:
    - Add a header comment with Task ID, Description, and Implementation Date
    - Convert Technical Details/Commands into executable script code:
      - For shell scripts: Write commands as-is, add error handling (`set -e` for exit on error)
+       - **Virtual Environment**: Always ensure virtual environment exists and is activated
+         - Use `uv venv` to create virtual environment if it doesn't exist
+         - Activate virtual environment using `source .venv/bin/activate` or use `uv run` for commands
+         - For dependency installation: Always use `uv sync` (never `pip install`)
+         - Update `pyproject.toml` with new dependencies before running `uv sync`
      - For Python scripts: Write Python code that executes the equivalent operations
+       - **Virtual Environment**: Use `uv run` to execute Python scripts, or ensure venv is activated
+       - For shebang: Use `#!/usr/bin/env -S uv run python` or activate venv before execution
+       - Assume dependencies are already installed via `uv sync` in the virtual environment
+       - Add a comment noting that dependencies must be in `pyproject.toml`
    - Add output/logging to indicate task progress and completion
    - Make the script executable (for shell scripts, add `chmod +x`)
 4. **Script Structure**:
@@ -43,8 +52,12 @@ For each of the 3 selected tasks:
 
 5. **Test and Fix Script**:
    - **CRITICAL**: After creating each script, immediately test it to ensure it works correctly
+   - **Virtual Environment Setup**: Before testing, ensure virtual environment exists:
+     - Run `uv venv` to create `.venv` if it doesn't exist
+     - Run `uv sync` to install dependencies in the virtual environment
    - For shell scripts: Run the script using `bash scripts/task_{TaskID}_{TaskName}.sh` or make it executable and run directly
-   - For Python scripts: Run the script using `python3 scripts/task_{TaskID}_{TaskName}.py`
+     - Scripts should handle venv activation internally or use `uv run` for Python commands
+   - For Python scripts: Run the script using `uv run python scripts/task_{TaskID}_{TaskName}.py` or ensure venv is activated
    - Check for errors, missing dependencies, import issues, syntax errors, or logical problems
    - If the script fails:
      - Analyze the error output
@@ -91,6 +104,65 @@ After updating all 3 tasks:
 4. **Push**: 
    - Run `git push` to push changes to the remote repository
 
+### Dependency Management
+
+**CRITICAL**: All Python dependencies must be managed using `uv` and TOML files:
+
+1. **Dependency Declaration (`pyproject.toml`)**:
+   - Always declare Python dependencies in `pyproject.toml` at the project root
+   - Never use `requirements.txt` files or `pip install` commands in scripts
+   - Add dependencies to the `[project.dependencies]` or `[project.optional-dependencies]` section in `pyproject.toml`
+   - Example structure:
+     ```toml
+     [project]
+     name = "chicken-detection"
+     dependencies = [
+         "python-dotenv>=1.0.0",
+         "wandb>=0.15.0",
+     ]
+     ```
+
+2. **Virtual Environment Management**:
+   - **CRITICAL**: Always use `uv venv` to create and manage virtual environments
+   - Create virtual environment with: `uv venv` (creates `.venv` directory by default)
+   - Never rely on system Python or assume a virtual environment is activated
+   - Shell scripts must ensure venv exists and is activated before running Python commands:
+     - Option 1: Create venv if missing: `uv venv` then `source .venv/bin/activate`
+     - Option 2: Use `uv run` for Python commands (automatically uses venv)
+   - Python scripts should be executed via `uv run python script.py` or ensure venv is activated
+   - The virtual environment (`.venv`) should be created at project root
+
+3. **Dependency Installation**:
+   - Always use `uv sync` to install dependencies instead of `pip install`
+   - `uv sync` automatically creates `.venv` if it doesn't exist and installs dependencies there
+   - For shell scripts that need to install dependencies: 
+     - First ensure venv exists: `uv venv` (if needed)
+     - Then use `uv sync` command to install dependencies in the venv
+   - For Python scripts: Dependencies should already be installed via `uv sync` in the virtual environment
+   - Never use `pip install` in scripts or documentation
+
+4. **Implementation Requirements**:
+   - Shell scripts that install dependencies must:
+     - First ensure virtual environment exists: `uv venv` (if `.venv` doesn't exist)
+     - Then use `uv sync` to install dependencies in the venv (not `pip install -r requirements.txt`)
+     - Activate venv before running Python commands: `source .venv/bin/activate` or use `uv run`
+   - Python scripts should:
+     - Be executed via `uv run python script.py` (automatically uses venv)
+     - Or ensure venv is activated before execution
+     - Assume dependencies are already installed via `uv sync` in the virtual environment
+   - If a script needs to ensure dependencies are installed:
+     - Run `uv venv` to create venv if missing
+     - Run `uv sync` to install dependencies in the venv
+   - When creating scripts that require new dependencies, update `pyproject.toml` first, then run `uv sync`
+
+5. **Why `uv venv` and `uv sync` over `pip install`**:
+   - Faster installation and dependency resolution
+   - Better dependency locking and reproducibility
+   - Integrated with modern Python project standards (PEP 517/518)
+   - Automatic virtual environment creation and management
+   - `uv venv` creates isolated environments without manual activation issues
+   - `uv sync` automatically uses the project's virtual environment
+
 ### Configuration and Secrets Management
 
 **CRITICAL**: All scripts must follow these configuration management rules:
@@ -111,7 +183,7 @@ After updating all 3 tasks:
 2. **Secrets and Credentials (`.env` file)**:
    - Store all sensitive information in `.env` file at the project root
    - Examples: API keys, passwords, tokens, database credentials, secret keys, etc.
-   - Use `python-dotenv` library to load environment variables from `.env`
+   - Use `python-dotenv` library (declared in `pyproject.toml` and installed via `uv sync`) to load environment variables from `.env`
    - Access secrets using `os.getenv('VARIABLE_NAME')` after loading `.env`
    - Example structure:
      ```
@@ -142,7 +214,9 @@ After updating all 3 tasks:
 - **No Tasks Available**: If no pending tasks are found, inform the user that all tasks are complete
 - **Date Format**: Always use ISO format (YYYY-MM-DD) for dates
 - **Error Handling**: Continue processing remaining tasks even if script creation or testing fails for one, but clearly mark failed tasks
-- **Script Type Selection**: Choose Python for complex logic, data processing, or when Python libraries are needed. Choose Shell for simple command sequences, system setup, or package installation.
+- **Script Type Selection**: Choose Python for complex logic, data processing, or when Python libraries are needed. Choose Shell for simple command sequences, system setup, or package installation (always use `uv sync` instead of `pip install`).
+- **Virtual Environment**: Always use `uv venv` to create virtual environments. Never assume a venv is activated or use system Python directly. Use `uv run` for Python commands or activate `.venv/bin/activate` in shell scripts.
+- **Dependency Management**: Always use `uv sync` to install Python dependencies. Declare all dependencies in `pyproject.toml`. Never use `pip install` or `requirements.txt` files. `uv sync` automatically creates and uses the `.venv` directory.
 - **Script Quality**: Ensure scripts are well-commented, handle errors gracefully, and provide clear output indicating their progress and completion status.
 - **Testing Requirement**: **MANDATORY** - Every script must be tested immediately after creation. Fix all issues found during testing before marking the task as complete. Do not proceed to the next task until the current script has been successfully tested and verified to work.
 - **Task Name in Filename**: Always include the sanitized task name in the script filename to make it easier to identify scripts by their purpose.
@@ -164,18 +238,21 @@ When user types "next":
    - Extract Task ID: 1.1.1, Description: "GPU Availability Check"
    - Create scripts/task_111_gpu_availability_check.sh (shell script)
    - Content: nvidia-smi command with error handling and verification logic
+   - Ensure venv setup if Python commands are used
    - Test script: Run `bash scripts/task_111_gpu_availability_check.sh`
    - Fix any issues found during testing, re-test until successful
 4. Create script for task 1.1.2:
    - Extract Task ID: 1.1.2, Description: "CUDA Version Verification"
    - Create scripts/task_112_cuda_version_verification.sh (shell script)
    - Content: nvcc --version command with CUDA version verification
+   - Ensure venv setup if Python commands are used
    - Test script: Run `bash scripts/task_112_cuda_version_verification.sh`
    - Fix any issues found during testing, re-test until successful
 5. Create script for task 1.1.3:
    - Extract Task ID: 1.1.3, Description: "VRAM Health Check"
    - Create scripts/task_113_vram_health_check.sh (shell script)
    - Content: VRAM availability check using nvidia-smi
+   - Ensure venv setup if Python commands are used
    - Test script: Run `bash scripts/task_113_vram_health_check.sh`
    - Fix any issues found during testing, re-test until successful
 6. Update plan.md:
@@ -210,13 +287,50 @@ nvidia-smi
 echo "GPU check completed successfully."
 ```
 
+**Example Shell Script with Dependencies (task_145_setup_environment.sh):**
+```bash
+#!/bin/bash
+# Task ID: 1.4.5
+# Description: Setup Environment
+# Created: 2024-01-15
+
+set -e
+
+echo "Setting up environment and installing dependencies..."
+
+# Ensure uv is available
+if ! command -v uv &> /dev/null; then
+    echo "Error: uv not found. Please install uv first."
+    exit 1
+fi
+
+# Create virtual environment if it doesn't exist
+if [ ! -d ".venv" ]; then
+    echo "Creating virtual environment..."
+    uv venv
+fi
+
+# Activate virtual environment
+source .venv/bin/activate
+
+# Sync dependencies from pyproject.toml (instead of pip install)
+# uv sync automatically uses the .venv directory
+uv sync
+
+echo "Environment setup completed successfully."
+```
+
 **Example Python Script (task_134_verify_logging_integration.py):**
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run python
 """
 Task ID: 1.3.4
 Description: Verify Logging Integration
 Created: 2024-01-15
+
+Note: This script should be executed using 'uv run python script.py' to ensure
+the virtual environment is used. Dependencies (wandb, python-dotenv) should be
+declared in pyproject.toml and installed via 'uv sync' before running this script.
 """
 
 import sys
