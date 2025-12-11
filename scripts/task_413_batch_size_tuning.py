@@ -1,4 +1,4 @@
-#!/usr/bin/env -S uv run python
+#!/usr/bin/env python3
 """
 Task ID: 4.1.3
 Description: Batch Size Tuning
@@ -9,9 +9,9 @@ based on utilization:
 - If utilization < 80%, increase train.batch_size
 - If OOM occurs, decrease batch size and enable train.accumulate_grad_batches=2
 
-Note: This script should be executed using 'uv run python script.py' to ensure
-the virtual environment is used. Dependencies (pyyaml, omegaconf) should be
-declared in pyproject.toml and installed via 'uv sync' before running this script.
+Note: This script should be executed using the wrapper shell script (task_413_batch_size_tuning.sh)
+which handles virtual environment setup via uv. Dependencies (pyyaml, omegaconf) should be
+declared in pyproject.toml and installed via 'uv sync'.
 """
 
 import sys

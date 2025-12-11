@@ -1,4 +1,4 @@
-#!/usr/bin/env -S uv run python
+#!/usr/bin/env python3
 """
 Task ID: 4.2.1
 Description: Monitor Focal Loss (Presence)
@@ -7,9 +7,9 @@ Created: 2025-01-15
 This script monitors the focal loss curve in WandB to check if it's decreasing steadily.
 If the loss stays flat, it suggests increasing loss.focal_loss_weight.
 
-Note: This script should be executed using 'uv run python script.py' to ensure
-the virtual environment is used. Dependencies (wandb, python-dotenv) should be
-declared in pyproject.toml and installed via 'uv sync' before running this script.
+Note: This script should be executed using the wrapper shell script (task_421_monitor_focal_loss.sh)
+which handles virtual environment setup via uv. Dependencies (wandb, python-dotenv) should be
+declared in pyproject.toml and installed via 'uv sync'.
 """
 
 import sys
@@ -38,17 +38,17 @@ except ImportError:
     sys.exit(1)
 
 
-def get_focal_loss_history(api, project_name: str, run_id: Optional[str] = None) -> Optional[List[Tuple[int, float]]]:
+def get_focal_loss_history(api, project_name: str, entity: str, run_id: Optional[str] = None) -> Optional[List[Tuple[int, float]]]:
     """
     Get focal loss history from WandB.
     Returns list of (step, loss_value) tuples.
     """
     try:
         if run_id:
-            run = api.run(f"{api.viewer()['entity']}/{project_name}/{run_id}")
+            run = api.run(f"{entity}/{project_name}/{run_id}")
         else:
             # Get the most recent run
-            runs = api.runs(f"{api.viewer()['entity']}/{project_name}", order="-created_at", per_page=1)
+            runs = api.runs(f"{entity}/{project_name}", order="-created_at", per_page=1)
             if not runs:
                 return None
             run = runs[0]
@@ -161,7 +161,46 @@ def main():
     # Initialize WandB API
     try:
         api = wandb.Api()
-        entity = api.viewer()['entity']
+        # Get entity from viewer - handle both dict and object responses
+        entity = None
+        try:
+            viewer = api.viewer()
+            if isinstance(viewer, dict):
+                entity = viewer.get('entity') or viewer.get('username')
+            else:
+                # Try to get entity or username attribute from object
+                entity = getattr(viewer, 'entity', None) or getattr(viewer, 'username', None)
+                # If still None, try to get from string representation
+                if entity is None:
+                    viewer_str = str(viewer)
+                    # Try to extract from string if it contains entity info
+                    if hasattr(viewer, '__dict__'):
+                        entity = viewer.__dict__.get('entity') or viewer.__dict__.get('username')
+        except Exception as e:
+            print(f"Warning: Could not get entity from viewer: {e}")
+        
+        # Fallback: use environment variable or try to infer from project
+        if not entity:
+            entity = os.getenv('WANDB_ENTITY')
+            if not entity:
+                # Try to access a run to infer entity (will fail gracefully if no runs)
+                try:
+                    # This will work if there are any runs
+                    test_runs = api.runs(project_name, per_page=1)
+                    if test_runs:
+                        # Extract entity from run path
+                        run_path = str(test_runs[0])
+                        if '/' in run_path:
+                            entity = run_path.split('/')[0]
+                except Exception:
+                    pass
+        
+        # Final fallback: use username from system
+        if not entity:
+            import getpass
+            entity = getpass.getuser()
+            print(f"Warning: Using system username as entity: {entity}")
+        
         print(f"Connected to WandB (entity: {entity})")
         print("")
     except Exception as e:
@@ -183,7 +222,20 @@ def main():
     
     # Fetch focal loss history
     print("Fetching focal loss history from WandB...")
-    loss_data = get_focal_loss_history(api, project_name, run_id)
+    try:
+        loss_data = get_focal_loss_history(api, project_name, entity, run_id)
+    except Exception as e:
+        print(f"ERROR: Could not fetch focal loss history: {e}", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("Troubleshooting:", file=sys.stderr)
+        print(f"  - Entity used: {entity}", file=sys.stderr)
+        print(f"  - Project: {project_name}", file=sys.stderr)
+        if run_id:
+            print(f"  - Run ID: {run_id}", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("You can set the entity explicitly:", file=sys.stderr)
+        print("  export WANDB_ENTITY=your_username", file=sys.stderr)
+        return 1
     
     if not loss_data:
         print("WARNING: No focal loss data found in the run(s).", file=sys.stderr)
@@ -194,7 +246,7 @@ def main():
         print("  3. No runs exist in the project yet", file=sys.stderr)
         print("")
         print("To monitor a specific run, provide the run ID:")
-        print("  python scripts/task_421_monitor_focal_loss.py <run_id>")
+        print("  bash scripts/task_421_monitor_focal_loss.sh <run_id>")
         return 1
     
     print(f"Found {len(loss_data)} data points")
