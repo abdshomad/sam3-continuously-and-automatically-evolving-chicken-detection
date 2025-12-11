@@ -72,7 +72,7 @@ This phase establishes the foundational hardware and software stack required to 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
 | **2.3.1** | **Negative Image Processing** | Condition: If image is in `not_chicken` folder OR has 0 annotations. Action: Add to \`images\` list with \`text\_input: "chicken"\`. \*\*Do NOT\*\* add any entry to \`annotations\` list. | \[x\] Script Created | 2025-12-12 |
-| **2.3.2** | **Ambiguous Class Exclusion** | If the dataset contains "ambiguous" classes (e.g., "unknown bird") that are neither clearly chicken nor clearly background, exclude these images to prevent confusing the model. | \[ \] Pending |  |
+| **2.3.2** | **Ambiguous Class Exclusion** | If the dataset contains "ambiguous" classes (e.g., "unknown bird") that are neither clearly chicken nor clearly background, exclude these images to prevent confusing the model. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 2.4: JSON Validation & Dataset Splitting**
 
@@ -80,8 +80,8 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **2.4.1** | **Generate JSON Artifacts** | Run script to output `chicken_train.json` (80%) and `chicken_val.json` (20%). Ensure stratified sampling so both sets contain "Not-Chicken" examples. | \[ \] Pending |  |
-| **2.4.2** | **Schema Validation** | Use `pycocotools` or a custom schema validator to check for type errors (e.g., ensure `id` is int, `segmentation` is list of lists). | \[ \] Pending |  |
+| **2.4.1** | **Generate JSON Artifacts** | Run script to output `chicken_train.json` (80%) and `chicken_val.json` (20%). Ensure stratified sampling so both sets contain "Not-Chicken" examples. | \[x\] Script Created | 2025-12-12 |
+| **2.4.2** | **Schema Validation** | Use `pycocotools` or a custom schema validator to check for type errors (e.g., ensure `id` is int, `segmentation` is list of lists). | \[x\] Script Created | 2025-12-12 |
 | **2.4.3** | **Version Data with DVC** | Commit the new JSONs and the raw image directory to DVC: \`dvc add data/images\` \`dvc add data/annotations\` \`git commit \-m "Create v1.0 SA-Co dataset"\` | \[ \] Pending |  |
 
 ---
