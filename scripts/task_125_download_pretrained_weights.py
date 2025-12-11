@@ -34,7 +34,7 @@ def main():
         from huggingface_hub import hf_hub_download
     except ImportError:
         print("Error: huggingface_hub not found. Please install it first:", file=sys.stderr)
-        print("  pip install huggingface_hub", file=sys.stderr)
+        print("  uv pip install huggingface_hub", file=sys.stderr)
         return 1
     
     # Get checkpoint path from config

@@ -20,18 +20,19 @@ if [ ! -d "$VENV_DIR" ]; then
     exit 1
 fi
 
-# Check if virtual environment is activated
+# Determine Python executable in venv
+if [ -f "$VENV_DIR/bin/python" ]; then
+    PYTHON_EXE="$VENV_DIR/bin/python"
+elif [ -f "$VENV_DIR/Scripts/python.exe" ]; then
+    PYTHON_EXE="$VENV_DIR/Scripts/python.exe"
+else
+    echo "ERROR: Could not find Python executable in '$VENV_DIR'"
+    exit 1
+fi
+
+# Check if virtual environment is activated (for uv)
 if [ -z "$VIRTUAL_ENV" ]; then
-    echo "Virtual environment not activated. Activating now..."
-    if [ -f "$VENV_DIR/bin/activate" ]; then
-        source "$VENV_DIR/bin/activate"
-    elif [ -f "$VENV_DIR/Scripts/activate" ]; then
-        source "$VENV_DIR/Scripts/activate"
-    else
-        echo "ERROR: Could not find activation script in '$VENV_DIR'"
-        exit 1
-    fi
-    echo "✓ Virtual environment activated"
+    echo "Virtual environment not activated. Will use venv Python directly."
     echo ""
 fi
 
@@ -43,7 +44,7 @@ if [ ! -f "$PYTHON_SCRIPT" ]; then
 fi
 
 # Check if required Python packages are installed
-if ! python -c "import huggingface_hub" 2>/dev/null; then
+if ! "$PYTHON_EXE" -c "import huggingface_hub" 2>/dev/null; then
     echo "ERROR: huggingface_hub not found"
     echo ""
     echo "Please run task 1.2.4 first to install SAM 3 dependencies:"
@@ -55,7 +56,7 @@ fi
 echo "Running download script..."
 echo ""
 
-if python "$PYTHON_SCRIPT"; then
+if "$PYTHON_EXE" "$PYTHON_SCRIPT"; then
     echo ""
     echo "✓ Download script completed successfully"
     exit 0

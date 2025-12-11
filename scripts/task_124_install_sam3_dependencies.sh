@@ -20,18 +20,28 @@ if [ ! -d "$VENV_DIR" ]; then
     exit 1
 fi
 
-# Check if virtual environment is activated
+# Determine Python executable in venv
+if [ -f "$VENV_DIR/bin/python" ]; then
+    PYTHON_EXE="$VENV_DIR/bin/python"
+elif [ -f "$VENV_DIR/Scripts/python.exe" ]; then
+    PYTHON_EXE="$VENV_DIR/Scripts/python.exe"
+else
+    echo "ERROR: Could not find Python executable in '$VENV_DIR'"
+    exit 1
+fi
+
+# Check if uv is available
+if ! command -v uv &> /dev/null; then
+    echo "ERROR: uv is not installed or not in PATH"
+    echo ""
+    echo "To install uv:"
+    echo "  curl -LsSf https://astral.sh/uv/install.sh | sh"
+    exit 1
+fi
+
+# Check if virtual environment is activated (for uv)
 if [ -z "$VIRTUAL_ENV" ]; then
-    echo "Virtual environment not activated. Activating now..."
-    if [ -f "$VENV_DIR/bin/activate" ]; then
-        source "$VENV_DIR/bin/activate"
-    elif [ -f "$VENV_DIR/Scripts/activate" ]; then
-        source "$VENV_DIR/Scripts/activate"
-    else
-        echo "ERROR: Could not find activation script in '$VENV_DIR'"
-        exit 1
-    fi
-    echo "✓ Virtual environment activated"
+    echo "Virtual environment not activated. Will use venv Python directly."
     echo ""
 fi
 
@@ -45,7 +55,7 @@ if [ ! -d "sam3" ]; then
 fi
 
 # Check if PyTorch is installed
-if ! python -c "import torch" 2>/dev/null; then
+if ! "$PYTHON_EXE" -c "import torch" 2>/dev/null; then
     echo "ERROR: PyTorch is not installed"
     echo ""
     echo "Please run task 1.2.3 first to install PyTorch:"
@@ -58,11 +68,11 @@ echo ""
 
 # Install numpy first with compatible version (numpy==1.26 doesn't exist, use 1.26.4)
 echo "Step 1: Installing numpy (compatible version 1.26.4)..."
-if pip install "numpy==1.26.4"; then
+if uv pip install "numpy==1.26.4"; then
     echo "✓ numpy 1.26.4 installed"
 else
     echo "⚠ WARNING: Failed to install numpy 1.26.4, trying latest 1.26.x..."
-    if ! pip install "numpy>=1.26.0,<1.27.0"; then
+    if ! uv pip install "numpy>=1.26.0,<1.27.0"; then
         echo "ERROR: Failed to install numpy"
         exit 1
     fi
@@ -71,7 +81,7 @@ echo ""
 
 # Install SAM 3 dependencies first (since numpy==1.26 requirement is too strict)
 echo "Step 2: Installing SAM 3 core dependencies..."
-if pip install timm "tqdm" "ftfy==6.1.1" regex "iopath>=0.1.10" typing_extensions huggingface_hub; then
+if uv pip install timm "tqdm" "ftfy==6.1.1" regex "iopath>=0.1.10" typing_extensions huggingface_hub; then
     echo "✓ SAM 3 core dependencies installed"
 else
     echo "ERROR: Failed to install SAM 3 core dependencies"
@@ -81,7 +91,7 @@ echo ""
 
 # Install SAM 3 in editable mode with --no-deps to bypass strict numpy==1.26 requirement
 echo "Step 3: Installing SAM 3 package (editable mode, bypassing strict numpy requirement)..."
-if pip install --no-deps -e sam3/; then
+if uv pip install --no-deps -e sam3/; then
     echo "✓ SAM 3 package installed"
 else
     echo "ERROR: Failed to install SAM 3 package"
@@ -91,7 +101,7 @@ echo ""
 
 # Install additional dependencies
 echo "Step 4: Installing additional dependencies (hydra-core, submitit)..."
-if pip install hydra-core submitit; then
+if uv pip install hydra-core submitit; then
     echo "✓ Additional dependencies installed"
 else
     echo "ERROR: Failed to install additional dependencies"
@@ -105,24 +115,24 @@ echo "Verification:"
 echo "----------------------------------------"
 
 # Check SAM 3
-if python -c "import sam3" 2>/dev/null; then
-    SAM3_VERSION=$(python -c "import sam3; print(getattr(sam3, '__version__', 'installed'))" 2>/dev/null || echo "installed")
+if "$PYTHON_EXE" -c "import sam3" 2>/dev/null; then
+    SAM3_VERSION=$("$PYTHON_EXE" -c "import sam3; print(getattr(sam3, '__version__', 'installed'))" 2>/dev/null || echo "installed")
     echo "✓ SAM 3: $SAM3_VERSION"
 else
     echo "⚠ WARNING: Could not import sam3"
 fi
 
 # Check Hydra
-if python -c "import hydra" 2>/dev/null; then
-    HYDRA_VERSION=$(python -c "import hydra; print(hydra.__version__)" 2>/dev/null || echo "installed")
+if "$PYTHON_EXE" -c "import hydra" 2>/dev/null; then
+    HYDRA_VERSION=$("$PYTHON_EXE" -c "import hydra; print(hydra.__version__)" 2>/dev/null || echo "installed")
     echo "✓ Hydra: $HYDRA_VERSION"
 else
     echo "⚠ WARNING: Could not import hydra"
 fi
 
 # Check Submitit
-if python -c "import submitit" 2>/dev/null; then
-    SUBMITIT_VERSION=$(python -c "import submitit; print(getattr(submitit, '__version__', 'installed'))" 2>/dev/null || echo "installed")
+if "$PYTHON_EXE" -c "import submitit" 2>/dev/null; then
+    SUBMITIT_VERSION=$("$PYTHON_EXE" -c "import submitit; print(getattr(submitit, '__version__', 'installed'))" 2>/dev/null || echo "installed")
     echo "✓ Submitit: $SUBMITIT_VERSION"
 else
     echo "⚠ WARNING: Could not import submitit"
