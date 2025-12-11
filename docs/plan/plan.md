@@ -15,7 +15,7 @@ This phase establishes the foundational hardware and software stack required to 
 | **1.1.1** | **GPU Availability Check** | Run `nvidia-smi`. Verify GPU model (Target: A100/H100 or RTX 3090/4090). Ensure Driver Version $\\ge$ 525.xx. | \[x\] Script Created | 2025-12-12 |
 | **1.1.2** | **CUDA Toolkit Verification** | Run `nvcc --version`. Ensure compatibility with PyTorch 2.x (Target: CUDA 11.8 or 12.1). | \[x\] Script Created | 2025-12-12 |
 | **1.1.3** | **VRAM Health Check** | Ensure no other processes are consuming VRAM. For 24GB cards, ensure 100% availability. | \[x\] Script Created | 2025-12-12 |
-| **1.1.4** | **Disk Space Allocation** | Provision fast storage (NVMe preferred) for the dataset. Reserve \~100GB+ for images and checkpoints. | \[ \] Pending |  |
+| **1.1.4** | **Disk Space Allocation** | Provision fast storage (NVMe preferred) for the dataset. Reserve \~100GB+ for images and checkpoints. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 1.2: Repository Setup & Dependency Installation**
 
@@ -23,10 +23,10 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **1.2.1** | **Clone SAM 3 Repository** | `git clone https://github.com/facebookresearch/sam3.git` \`cd sam3\` | \[ \] Pending |  |
-| **1.2.2** | **Create Virtual Environment** | Create a dedicated Conda environment to prevent conflicts: \`conda create \-n sam3\_chicken python=3.10 \-y\` \`conda activate sam3\_chicken\` | \[ \] Pending |  |
+| **1.2.1** | **Add SAM 3 as Git Submodule** | `git submodule add https://github.com/facebookresearch/sam3.git sam3` \`git submodule update --init --recursive\` | \[x\] Script Created | 2025-12-12 |
+| **1.2.2** | **Create Virtual Environment** | Create a dedicated virtual environment using uv to prevent conflicts: \`uv venv\` \`source .venv/bin/activate\` (or \`source .venv/Scripts/activate\` on Windows) | \[x\] Script Created | 2025-12-12 |
 | **1.2.3** | **Install PyTorch** | Install Pytorch with CUDA support: \`pip install torch torchvision \--index-url https://download.pytorch.org/whl/cu118\` (Adjust for CUDA version) | \[ \] Pending |  |
-| **1.2.4** | **Install SAM 3 Dependencies** | Install core requirements and Hydra/Submitit: \`pip install \-e .\` \`pip install hydra-core submitit\` | \[ \] Pending |  |
+| **1.2.4** | **Install SAM 3 Dependencies** | Install core requirements and Hydra/Submitit: \`pip install \-e sam3/\` \`pip install hydra-core submitit\` | \[ \] Pending |  |
 | **1.2.5** | **Download Pre-trained Weights** | Download the official SAM 3 checkpoint (e.g., `sam3_vit_h.pt`) to the `checkpoints/` directory. | \[ \] Pending |  |
 
 #### **Step 1.3: Weights & Biases (WandB) & DVC Configuration**

@@ -51,17 +51,24 @@ fi
 DRIVER_MAJOR=$(echo "$DRIVER_VERSION" | cut -d'.' -f1)
 DRIVER_MINOR=$(echo "$DRIVER_VERSION" | cut -d'.' -f2)
 
-# Compare driver version (need >= 525.xx)
-DRIVER_OK=false
-if [ "$DRIVER_MAJOR" -gt 525 ]; then
-    DRIVER_OK=true
-    echo "✓ Driver version is >= 525.xx"
-elif [ "$DRIVER_MAJOR" -eq 525 ] && [ -n "$DRIVER_MINOR" ]; then
-    DRIVER_OK=true
-    echo "✓ Driver version is >= 525.xx"
-else
-    echo "⚠ WARNING: Driver version should be >= 525.xx"
+# Validate driver version components
+if [ -z "$DRIVER_MAJOR" ] || ! [ "$DRIVER_MAJOR" -eq "$DRIVER_MAJOR" ] 2>/dev/null; then
+    echo "⚠ WARNING: Could not parse driver version"
     echo "  Current: $DRIVER_VERSION"
+    DRIVER_OK=false
+else
+    # Compare driver version (need >= 525.xx)
+    DRIVER_OK=false
+    if [ "$DRIVER_MAJOR" -gt 525 ]; then
+        DRIVER_OK=true
+        echo "✓ Driver version is >= 525.xx"
+    elif [ "$DRIVER_MAJOR" -eq 525 ] && [ -n "$DRIVER_MINOR" ]; then
+        DRIVER_OK=true
+        echo "✓ Driver version is >= 525.xx"
+    else
+        echo "⚠ WARNING: Driver version should be >= 525.xx"
+        echo "  Current: $DRIVER_VERSION"
+    fi
 fi
 
 echo ""

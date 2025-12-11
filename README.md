@@ -20,7 +20,75 @@ This project implements a complete pipeline for:
 │   │   └── plan.md       # Implementation plan with tasks
 │   └── prd/
 │       └── prd.md        # Product Requirements Document
+├── sam3/                  # SAM 3 repository (git submodule)
+├── scripts/               # Task execution scripts
 └── README.md
+```
+
+**Note**: The `sam3/` directory is a git submodule pointing to the official Meta Research SAM 3 repository. See [Setup](#setup) section for initialization instructions.
+
+## Setup
+
+### Initial Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd sam3-continuously-and-automatically-evolving-chicken-detection
+   ```
+
+2. **Initialize git submodules**:
+   ```bash
+   git submodule update --init --recursive
+   ```
+   
+   This will clone the SAM 3 repository as a submodule in the `sam3/` directory.
+
+3. **Create and activate virtual environment using uv**:
+   ```bash
+   # Create virtual environment
+   uv venv --python 3.10
+   
+   # Activate the environment
+   source .venv/bin/activate  # On Linux/Mac
+   # or
+   source .venv/Scripts/activate  # On Windows
+   ```
+
+4. **Install dependencies**:
+   ```bash
+   # Install project dependencies from pyproject.toml
+   uv pip install -e .
+   
+   # Install PyTorch with CUDA support (adjust CUDA version as needed)
+   uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+   
+   # Install SAM 3 in editable mode from submodule
+   uv pip install -e sam3/
+   
+   # Install other dependencies
+   uv pip install hydra-core submitit wandb dvc
+   ```
+
+### Git Submodule Strategy
+
+This project uses **git submodules** to include the official Meta Research SAM 3 repository. This approach provides:
+
+- **Proper version control**: The submodule is tracked at a specific commit, ensuring reproducibility
+- **Easy updates**: Update to latest version with `git submodule update --remote sam3`
+- **Clean separation**: Keeps the main project and SAM 3 codebase separate
+- **Flexibility**: Can make local modifications to SAM 3 if needed
+
+**Important**: When cloning this repository, always run `git submodule update --init --recursive` to initialize the SAM 3 submodule.
+
+**Updating the submodule**:
+```bash
+# Update to latest commit from upstream
+git submodule update --remote sam3
+
+# Commit the submodule update
+git add sam3
+git commit -m "Update sam3 submodule to latest version"
 ```
 
 ## Quick Start
@@ -31,7 +99,7 @@ This project includes an automated workflow for executing tasks from the impleme
 
 1. Read the next 3 pending tasks from `docs/plan/plan.md`
 2. Execute each task sequentially
-3. Update task status to `[x] Done` with implementation date
+3. Update task status to `[x] Script Created` with implementation date
 4. Commit and push changes automatically
 
 See [AGENTS.md](AGENTS.md) for detailed instructions on the automated workflow.

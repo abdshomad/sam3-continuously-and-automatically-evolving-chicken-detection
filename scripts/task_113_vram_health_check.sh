@@ -27,9 +27,20 @@ TOTAL_MEMORY=$(echo "$GPU_MEMORY_INFO" | head -n1 | cut -d',' -f1 | tr -d ' ')
 USED_MEMORY=$(echo "$GPU_MEMORY_INFO" | head -n1 | cut -d',' -f2 | tr -d ' ')
 FREE_MEMORY=$(echo "$GPU_MEMORY_INFO" | head -n1 | cut -d',' -f3 | tr -d ' ')
 
-# Calculate percentage
-USED_PERCENT=$((USED_MEMORY * 100 / TOTAL_MEMORY))
-FREE_PERCENT=$((FREE_MEMORY * 100 / TOTAL_MEMORY))
+# Validate extracted values
+if [ -z "$TOTAL_MEMORY" ] || [ "$TOTAL_MEMORY" -eq 0 ]; then
+    echo "ERROR: Could not extract valid GPU memory information"
+    exit 1
+fi
+
+# Calculate percentage (avoid division by zero)
+if [ "$TOTAL_MEMORY" -gt 0 ]; then
+    USED_PERCENT=$((USED_MEMORY * 100 / TOTAL_MEMORY))
+    FREE_PERCENT=$((FREE_MEMORY * 100 / TOTAL_MEMORY))
+else
+    echo "ERROR: Total memory is zero or invalid"
+    exit 1
+fi
 
 echo "----------------------------------------"
 echo "VRAM Status:"
@@ -43,9 +54,12 @@ echo ""
 echo "Checking for processes using GPU..."
 echo ""
 
-PROCESSES=$(nvidia-smi --query-compute-apps=pid,process_name,used_memory --format=csv,noheader)
+PROCESSES=$(nvidia-smi --query-compute-apps=pid,process_name,used_memory --format=csv,noheader 2>/dev/null || echo "")
 
-if [ -z "$PROCESSES" ] || [ "$PROCESSES" = "" ]; then
+# Remove any header lines and check if we have actual process data
+PROCESSES=$(echo "$PROCESSES" | grep -v "^pid," | grep -v "^$" || echo "")
+
+if [ -z "$PROCESSES" ]; then
     echo "✓ No processes detected using GPU VRAM"
     echo ""
 else

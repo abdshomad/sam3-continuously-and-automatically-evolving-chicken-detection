@@ -16,7 +16,6 @@ if ! command -v nvcc &> /dev/null; then
     echo ""
     echo "To install CUDA Toolkit:"
     echo "  - Visit: https://developer.nvidia.com/cuda-downloads"
-    echo "  - Or use conda: conda install cudatoolkit"
     exit 1
 fi
 
@@ -49,7 +48,14 @@ CUDA_OK=false
 CUDA_MAJOR=$(echo "$CUDA_VERSION" | cut -d'.' -f1)
 CUDA_MINOR=$(echo "$CUDA_VERSION" | cut -d'.' -f2)
 
-if [ "$CUDA_MAJOR" -eq 11 ] && [ "$CUDA_MINOR" -eq 8 ]; then
+# Validate CUDA version components
+if [ -z "$CUDA_MAJOR" ] || ! [ "$CUDA_MAJOR" -eq "$CUDA_MAJOR" ] 2>/dev/null; then
+    echo "⚠ WARNING: Could not parse CUDA version"
+    echo "  Current: $CUDA_VERSION"
+elif [ -z "$CUDA_MINOR" ] || ! [ "$CUDA_MINOR" -eq "$CUDA_MINOR" ] 2>/dev/null; then
+    echo "⚠ WARNING: Could not parse CUDA minor version"
+    echo "  Current: $CUDA_VERSION"
+elif [ "$CUDA_MAJOR" -eq 11 ] && [ "$CUDA_MINOR" -eq 8 ]; then
     CUDA_OK=true
     echo "✓ CUDA version 11.8 is compatible with PyTorch 2.x"
 elif [ "$CUDA_MAJOR" -eq 12 ] && [ "$CUDA_MINOR" -eq 1 ]; then
