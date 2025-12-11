@@ -63,14 +63,15 @@ def is_dvc_initialized():
 
 def get_remote_storage_url():
     """Get remote storage URL from config or environment."""
-    # Try environment variable first
+    # Try environment variable first (from .env file)
     storage_url = os.getenv('DVC_REMOTE_STORAGE_URL')
+    from_env = bool(storage_url)
     
     # Try config.py
     if not storage_url:
         storage_url = getattr(config, 'DVC_REMOTE_STORAGE_URL', None)
     
-    return storage_url
+    return storage_url, from_env
 
 def check_remote_exists(remote_name='storage'):
     """Check if a DVC remote with the given name already exists."""
@@ -130,14 +131,17 @@ def main():
         return 1
     
     # Get remote storage URL
-    storage_url = get_remote_storage_url()
+    storage_url, from_env = get_remote_storage_url()
     remote_name = 'storage'
     
     # Check if remote already exists
     if check_remote_exists(remote_name):
         existing_url = get_remote_url(remote_name)
         print(f"✓ Remote '{remote_name}' already exists")
-        print(f"  URL: {existing_url}")
+        if existing_url:
+            print(f"  URL: {existing_url}")
+        else:
+            print(f"  URL: (not set)")
         print("")
         
         # If no storage_url is configured but remote exists, consider it already configured
@@ -151,50 +155,83 @@ def main():
             print("  - Proceed to Phase 2: Data Engineering (ETL) & Schema Transformation")
             return 0
         
-        # If storage_url differs from existing, only prompt if explicitly configured
+        # If storage_url differs from existing, handle based on source
         if existing_url != storage_url:
-            print(f"⚠ WARNING: Existing remote URL ({existing_url}) differs from configured URL ({storage_url})")
-            print("")
-            if sys.stdin.isatty():
+            # If URL is from .env file, automatically update without warning
+            if from_env:
                 try:
-                    response = input(f"Update remote URL to {storage_url}? (y/n): ").strip().lower()
-                    if response == 'y':
-                        try:
-                            dvc_cmd = find_command_in_venv('dvc')
-                            result = subprocess.run(
-                                [dvc_cmd, 'remote', 'modify', remote_name, 'url', storage_url],
-                                cwd=str(project_root),
-                                capture_output=True,
-                                text=True
-                            )
-                            if result.returncode == 0:
-                                print(f"✓ Remote URL updated to: {storage_url}")
-                            else:
-                                print(f"ERROR: Failed to update remote URL: {result.stderr}", file=sys.stderr)
-                                return 1
-                        except Exception as e:
-                            print(f"ERROR: Failed to update remote: {e}", file=sys.stderr)
-                            return 1
+                    dvc_cmd = find_command_in_venv('dvc')
+                    result = subprocess.run(
+                        [dvc_cmd, 'remote', 'modify', remote_name, 'url', storage_url],
+                        cwd=str(project_root),
+                        capture_output=True,
+                        text=True
+                    )
+                    if result.returncode == 0:
+                        print(f"✓ Remote URL updated to: {storage_url} (from .env)")
+                        print("")
+                        print("=" * 50)
+                        print("✓ Remote Storage Configuration: COMPLETED")
+                        print("=" * 50)
+                        print("")
+                        print(f"Remote '{remote_name}' configured:")
+                        print(f"  URL: {storage_url}")
+                        print("")
+                        print("Next steps:")
+                        print("  - Proceed to Phase 2: Data Engineering (ETL) & Schema Transformation")
+                        print("  - Use 'dvc add <file>' to track files with DVC")
+                        print("  - Use 'dvc push' to upload tracked files to remote storage")
+                        return 0
                     else:
+                        print(f"ERROR: Failed to update remote URL: {result.stderr}", file=sys.stderr)
+                        return 1
+                except Exception as e:
+                    print(f"ERROR: Failed to update remote: {e}", file=sys.stderr)
+                    return 1
+            else:
+                # URL from config.py - show warning and prompt
+                print(f"⚠ WARNING: Existing remote URL ({existing_url}) differs from configured URL ({storage_url})")
+                print("")
+                if sys.stdin.isatty():
+                    try:
+                        response = input(f"Update remote URL to {storage_url}? (y/n): ").strip().lower()
+                        if response == 'y':
+                            try:
+                                dvc_cmd = find_command_in_venv('dvc')
+                                result = subprocess.run(
+                                    [dvc_cmd, 'remote', 'modify', remote_name, 'url', storage_url],
+                                    cwd=str(project_root),
+                                    capture_output=True,
+                                    text=True
+                                )
+                                if result.returncode == 0:
+                                    print(f"✓ Remote URL updated to: {storage_url}")
+                                else:
+                                    print(f"ERROR: Failed to update remote URL: {result.stderr}", file=sys.stderr)
+                                    return 1
+                            except Exception as e:
+                                print(f"ERROR: Failed to update remote: {e}", file=sys.stderr)
+                                return 1
+                        else:
+                            print("Keeping existing remote URL.")
+                            print("=" * 50)
+                            print("✓ Remote Storage Configuration: ALREADY COMPLETE")
+                            print("=" * 50)
+                            return 0
+                    except (EOFError, KeyboardInterrupt):
+                        print("\nUpdate cancelled.")
                         print("Keeping existing remote URL.")
                         print("=" * 50)
                         print("✓ Remote Storage Configuration: ALREADY COMPLETE")
                         print("=" * 50)
                         return 0
-                except (EOFError, KeyboardInterrupt):
-                    print("\nUpdate cancelled.")
-                    print("Keeping existing remote URL.")
+                else:
+                    # Non-interactive mode: keep existing URL
+                    print("Non-interactive mode: Keeping existing remote URL.")
                     print("=" * 50)
                     print("✓ Remote Storage Configuration: ALREADY COMPLETE")
                     print("=" * 50)
                     return 0
-            else:
-                # Non-interactive mode: keep existing URL
-                print("Non-interactive mode: Keeping existing remote URL.")
-                print("=" * 50)
-                print("✓ Remote Storage Configuration: ALREADY COMPLETE")
-                print("=" * 50)
-                return 0
         else:
             print("=" * 50)
             print("✓ Remote Storage Configuration: ALREADY COMPLETE")
@@ -205,6 +242,7 @@ def main():
             return 0
     
     # If no storage URL is configured, check if remote already exists
+    # (storage_url might be None, but from_env will be False)
     if not storage_url:
         # If remote already exists, consider it configured
         if check_remote_exists(remote_name):
