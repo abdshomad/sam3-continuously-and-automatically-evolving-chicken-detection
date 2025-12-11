@@ -25,9 +25,9 @@ This phase establishes the foundational hardware and software stack required to 
 | :---- | :---- | :---- | :---- | :---- |
 | **1.2.1** | **Add SAM 3 as Git Submodule** | `git submodule add https://github.com/facebookresearch/sam3.git sam3` \`git submodule update --init --recursive\` | \[x\] Script Created | 2025-12-12 |
 | **1.2.2** | **Create Virtual Environment** | Create a dedicated virtual environment using uv to prevent conflicts: \`uv venv\` \`source .venv/bin/activate\` (or \`source .venv/Scripts/activate\` on Windows) | \[x\] Script Created | 2025-12-12 |
-| **1.2.3** | **Install PyTorch** | Install Pytorch with CUDA support: \`pip install torch torchvision \--index-url https://download.pytorch.org/whl/cu118\` (Adjust for CUDA version) | \[ \] Pending |  |
-| **1.2.4** | **Install SAM 3 Dependencies** | Install core requirements and Hydra/Submitit: \`pip install \-e sam3/\` \`pip install hydra-core submitit\` | \[ \] Pending |  |
-| **1.2.5** | **Download Pre-trained Weights** | Download the official SAM 3 checkpoint (e.g., `sam3_vit_h.pt`) to the `checkpoints/` directory. | \[ \] Pending |  |
+| **1.2.3** | **Install PyTorch** | Install Pytorch with CUDA support: \`pip install torch torchvision \--index-url https://download.pytorch.org/whl/cu118\` (Adjust for CUDA version) | \[x\] Script Created | 2025-12-12 |
+| **1.2.4** | **Install SAM 3 Dependencies** | Install core requirements and Hydra/Submitit: \`pip install \-e sam3/\` \`pip install hydra-core submitit\` | \[x\] Script Created | 2025-12-12 |
+| **1.2.5** | **Download Pre-trained Weights** | Download the official SAM 3 checkpoint (e.g., `sam3_vit_h.pt`) to the `checkpoints/` directory. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 1.3: Weights & Biases (WandB) & DVC Configuration**
 
