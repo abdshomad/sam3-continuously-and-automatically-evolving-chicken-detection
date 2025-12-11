@@ -12,9 +12,9 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **1.1.1** | **GPU Availability Check** | Run `nvidia-smi`. Verify GPU model (Target: A100/H100 or RTX 3090/4090). Ensure Driver Version $\\ge$ 525.xx. | \[ \] Pending |  |
-| **1.1.2** | **CUDA Toolkit Verification** | Run `nvcc --version`. Ensure compatibility with PyTorch 2.x (Target: CUDA 11.8 or 12.1). | \[ \] Pending |  |
-| **1.1.3** | **VRAM Health Check** | Ensure no other processes are consuming VRAM. For 24GB cards, ensure 100% availability. | \[ \] Pending |  |
+| **1.1.1** | **GPU Availability Check** | Run `nvidia-smi`. Verify GPU model (Target: A100/H100 or RTX 3090/4090). Ensure Driver Version $\\ge$ 525.xx. | \[x\] Script Created | 2025-12-12 |
+| **1.1.2** | **CUDA Toolkit Verification** | Run `nvcc --version`. Ensure compatibility with PyTorch 2.x (Target: CUDA 11.8 or 12.1). | \[x\] Script Created | 2025-12-12 |
+| **1.1.3** | **VRAM Health Check** | Ensure no other processes are consuming VRAM. For 24GB cards, ensure 100% availability. | \[x\] Script Created | 2025-12-12 |
 | **1.1.4** | **Disk Space Allocation** | Provision fast storage (NVMe preferred) for the dataset. Reserve \~100GB+ for images and checkpoints. | \[ \] Pending |  |
 
 #### **Step 1.2: Repository Setup & Dependency Installation**
