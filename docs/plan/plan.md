@@ -35,9 +35,9 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **1.3.1** | **WandB Initialization** | Install and login to Weights & Biases: \`pip install wandb\` \`wandb login \` | \[ \] Pending |  |
-| **1.3.2** | **DVC Initialization** | Initialize DVC in the project root: \`pip install dvc\` \`dvc init\` | \[ \] Pending |  |
-| **1.3.3** | **Configure Remote Storage** | Set up the remote storage for DVC (S3, GDrive, or Shared Network Drive): \`dvc remote add \-d storage s3:///chicken-data\` | \[ \] Pending |  |
+| **1.3.1** | **WandB Initialization** | Install and login to Weights & Biases: \`pip install wandb\` \`wandb login \` | \[x\] Script Created | 2025-12-12 |
+| **1.3.2** | **DVC Initialization** | Initialize DVC in the project root: \`pip install dvc\` \`dvc init\` | \[x\] Script Created | 2025-12-12 |
+| **1.3.3** | **Configure Remote Storage** | Set up the remote storage for DVC (S3, GDrive, or Shared Network Drive): \`dvc remote add \-d storage s3:///chicken-data\` | \[x\] Script Created | 2025-12-12 |
 | **1.3.4** | **Verify Logging Integration** | Run a dummy Python script importing `wandb` to ensure it can reach the dashboard servers from the training node. | \[ \] Pending |  |
 
 ---
