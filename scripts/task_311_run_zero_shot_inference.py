@@ -84,6 +84,34 @@ def main():
     if not check_file_exists(val_json_path, "Validation JSON"):
         print("Please run Phase 2 tasks first to generate chicken_val.json.", file=sys.stderr)
         return 1
+    
+    # Ensure queried_category field exists in JSON (required by SAM3)
+    try:
+        import json
+        with open(val_json_path, 'r') as f:
+            data = json.load(f)
+        
+        # Find chicken category ID
+        chicken_cat_id = 1  # default
+        if 'categories' in data and len(data['categories']) > 0:
+            chicken_cat = next((c for c in data['categories'] if 'chicken' in c.get('name', '').lower()), data['categories'][0])
+            chicken_cat_id = chicken_cat.get('id')
+        
+        # Add queried_category to all images if missing
+        updated = 0
+        if 'images' in data:
+            for img in data['images']:
+                if 'queried_category' not in img:
+                    img['queried_category'] = str(chicken_cat_id)
+                    updated += 1
+        
+        # Save if updated
+        if updated > 0:
+            with open(val_json_path, 'w') as f:
+                json.dump(data, f, indent=2)
+            print(f"✓ Added queried_category={chicken_cat_id} to {updated} images in validation JSON")
+    except Exception as e:
+        print(f"WARNING: Could not verify/update queried_category in JSON: {e}", file=sys.stderr)
 
     # Check if config file exists
     if not check_file_exists(config_path, "Evaluation config"):
