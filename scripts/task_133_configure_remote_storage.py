@@ -140,7 +140,19 @@ def main():
         print(f"  URL: {existing_url}")
         print("")
         
-        if storage_url and existing_url != storage_url:
+        # If no storage_url is configured but remote exists, consider it already configured
+        if not storage_url:
+            print("=" * 50)
+            print("✓ Remote Storage Configuration: ALREADY COMPLETE")
+            print("=" * 50)
+            print("")
+            print("Remote storage is already configured.")
+            print("Next steps:")
+            print("  - Proceed to Phase 2: Data Engineering (ETL) & Schema Transformation")
+            return 0
+        
+        # If storage_url differs from existing, only prompt if explicitly configured
+        if existing_url != storage_url:
             print(f"⚠ WARNING: Existing remote URL ({existing_url}) differs from configured URL ({storage_url})")
             print("")
             if sys.stdin.isatty():
@@ -163,8 +175,26 @@ def main():
                         except Exception as e:
                             print(f"ERROR: Failed to update remote: {e}", file=sys.stderr)
                             return 1
+                    else:
+                        print("Keeping existing remote URL.")
+                        print("=" * 50)
+                        print("✓ Remote Storage Configuration: ALREADY COMPLETE")
+                        print("=" * 50)
+                        return 0
                 except (EOFError, KeyboardInterrupt):
                     print("\nUpdate cancelled.")
+                    print("Keeping existing remote URL.")
+                    print("=" * 50)
+                    print("✓ Remote Storage Configuration: ALREADY COMPLETE")
+                    print("=" * 50)
+                    return 0
+            else:
+                # Non-interactive mode: keep existing URL
+                print("Non-interactive mode: Keeping existing remote URL.")
+                print("=" * 50)
+                print("✓ Remote Storage Configuration: ALREADY COMPLETE")
+                print("=" * 50)
+                return 0
         else:
             print("=" * 50)
             print("✓ Remote Storage Configuration: ALREADY COMPLETE")
@@ -174,8 +204,24 @@ def main():
             print("  - Proceed to Phase 2: Data Engineering (ETL) & Schema Transformation")
             return 0
     
-    # If no storage URL is configured, prompt user
+    # If no storage URL is configured, check if remote already exists
     if not storage_url:
+        # If remote already exists, consider it configured
+        if check_remote_exists(remote_name):
+            existing_url = get_remote_url(remote_name)
+            print(f"✓ Remote '{remote_name}' already exists")
+            print(f"  URL: {existing_url}")
+            print("")
+            print("=" * 50)
+            print("✓ Remote Storage Configuration: ALREADY COMPLETE")
+            print("=" * 50)
+            print("")
+            print("Remote storage is already configured.")
+            print("Next steps:")
+            print("  - Proceed to Phase 2: Data Engineering (ETL) & Schema Transformation")
+            return 0
+        
+        # No remote exists and no URL configured, prompt user
         print("No remote storage URL configured.")
         print("")
         print("To configure remote storage, you have two options:")

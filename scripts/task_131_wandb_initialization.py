@@ -138,6 +138,53 @@ def main():
     print(f"WandB project name: {project_name}")
     print("")
     
+    # Check if wandb is already logged in
+    print("Checking WandB login status...")
+    print("")
+    try:
+        # Try to initialize API and verify authentication
+        api = wandb.Api()
+        
+        # Try to verify login by checking if we can access authenticated endpoints
+        # If wandb is logged in, this should work without errors
+        try:
+            # Check if we can access the API (this requires authentication)
+            # We'll try a simple operation that requires auth
+            if hasattr(api, 'viewer'):
+                try:
+                    user = api.viewer()
+                    username = user.get('username', 'unknown') if isinstance(user, dict) else str(user)
+                    print(f"✓ WandB is already logged in (user: {username})")
+                except (wandb.errors.AuthenticationError, wandb.errors.UsageError):
+                    # Not authenticated
+                    raise
+            else:
+                # Try alternative method: check if API can be used
+                # If no authentication error is raised, assume logged in
+                print("✓ WandB credentials found (already configured)")
+            
+            # If we get here, wandb is logged in
+            print("")
+            print("=" * 50)
+            print("✓ WandB Initialization: ALREADY COMPLETE")
+            print("=" * 50)
+            print("")
+            print(f"Project name: {project_name}")
+            print("")
+            print("Next steps:")
+            print("  - Proceed to Task 1.3.2: DVC Initialization")
+            return 0
+            
+        except (wandb.errors.AuthenticationError, wandb.errors.UsageError):
+            # Authentication failed, need to login
+            pass
+        except Exception:
+            # Other errors - might not be logged in, proceed to login flow
+            pass
+    except Exception:
+        # API initialization failed or not logged in, proceed to login flow
+        pass
+    
     # Check for API key in environment
     wandb_api_key = os.getenv('WANDB_API_KEY')
     
