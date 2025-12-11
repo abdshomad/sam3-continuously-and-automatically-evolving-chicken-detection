@@ -134,8 +134,8 @@ This phase executes the training process defined in **PRD Chapter 5**, applying 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
 | **4.1.1** | **Local Training Launch (Debugging)** | Run a short sanity check (1 epoch) locally to verify data loading: \`python sam3/train/train.py \-c configs/sam3\_chicken\_finetune.yaml \--use-cluster 0 \--num-gpus 1 train.max\_epochs=1\` | \[x\] Script Created | 2025-12-12 |
-| **4.1.2** | **Cluster Training Launch (Production)** | Submit the full training job via SLURM/Submitit: \`python sam3/train/train.py \-c configs/sam3\_chicken\_finetune.yaml \--use-cluster 1 \--num-nodes 1 \--num-gpus 4\` | \[ \] Pending |  |
-| **4.1.3** | **Batch Size Tuning** | Monitor VRAM usage via `nvidia-smi`. If utilization \< 80%, increase `train.batch_size` in the config. If OOM (Out of Memory) occurs, decrease batch size and enable `train.accumulate_grad_batches=2`. | \[ \] Pending |  |
+| **4.1.2** | **Cluster Training Launch (Production)** | Submit the full training job via SLURM/Submitit: \`python sam3/train/train.py \-c configs/sam3\_chicken\_finetune.yaml \--use-cluster 1 \--num-nodes 1 \--num-gpus 4\` | \[x\] Script Created | 2025-12-12 |
+| **4.1.3** | **Batch Size Tuning** | Monitor VRAM usage via `nvidia-smi`. If utilization \< 80%, increase `train.batch_size` in the config. If OOM (Out of Memory) occurs, decrease batch size and enable `train.accumulate_grad_batches=2`. | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 4.2: Monitoring the Presence Head (Convergence Checks)**
 
@@ -143,7 +143,7 @@ This phase executes the training process defined in **PRD Chapter 5**, applying 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **4.2.1** | **Monitor Focal Loss (Presence)** | Check the `loss_focal` curve in WandB. It should decrease steadily.  \*\*Risk:\*\* If it stays flat, the model is ignoring the "Not-Chicken" samples. Increase \`loss.focal\_loss\_weight\`. | \[ \] Pending |  |
+| **4.2.1** | **Monitor Focal Loss (Presence)** | Check the `loss_focal` curve in WandB. It should decrease steadily.  \*\*Risk:\*\* If it stays flat, the model is ignoring the "Not-Chicken" samples. Increase \`loss.focal\_loss\_weight\`. | \[x\] Script Created | 2025-12-12 |
 | **4.2.2** | **Monitor Dice/IoU Loss (Masks)** | Check `loss_dice` and `loss_iou`. These should decrease only for positive samples. | \[ \] Pending |  |
 | **4.2.3** | **Watch Gradient Norms** | Monitor `grad_norm`. Spikes indicate instability. If observed, lower the Learning Rate (`optimizer.lr`) or increase Warm-up steps. | \[ \] Pending |  |
 
