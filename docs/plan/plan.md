@@ -106,8 +106,8 @@ This phase establishes the foundational hardware and software stack required to 
 | :---- | :---- | :---- | :---- | :---- |
 | **3.2.1** | **Create Experiment Config** | Create `configs/sam3_chicken_finetune.yaml`. Inherit from the default fine-tuning config (e.g., `defaults: [roboflow_v100_ft]`). | \[x\] Script Created | 2025-12-12 |
 | **3.2.2** | **Define Dataset Paths** | Update the `dataset` block: \`train\_json: "data/chicken\_train.json"\` \`val\_json: "data/chicken\_val.json"\` \`img\_dir: "data/images"\` | \[x\] Script Created | 2025-12-12 |
-| **3.2.3** | **Set Prompt Mode** | Ensure the data loader is configured for PCS: \`use\_text\_prompts: True\` \`prompt\_column: "text\_input"\` | \[ \] Pending |  |
-| **3.2.4** | **Hardware Optimization** | Enable memory savers in config: \`model.use\_gradient\_checkpointing: True\` \`trainer.precision: "bf16"\` (if A100) or \`"fp16"\` (if V100/RTX). | \[ \] Pending |  |
+| **3.2.3** | **Set Prompt Mode** | Ensure the data loader is configured for PCS: \`use\_text\_prompts: True\` \`prompt\_column: "text\_input"\` | \[x\] Script Created | 2025-12-12 |
+| **3.2.4** | **Hardware Optimization** | Enable memory savers in config: \`model.use\_gradient\_checkpointing: True\` \`trainer.precision: "bf16"\` (if A100) or \`"fp16"\` (if V100/RTX). | \[x\] Script Created | 2025-12-12 |
 
 #### **Step 3.3: Loss Function & Hyperparameter Definition**
 
@@ -115,7 +115,7 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **3.3.1** | **Configure Learning Rate** | Set a conservative LR schedule to protect the backbone: \`optimizer.lr: 1e-5\` \`scheduler: "cosine\_with\_warmup"\` | \[ \] Pending |  |
+| **3.3.1** | **Configure Learning Rate** | Set a conservative LR schedule to protect the backbone: \`optimizer.lr: 1e-5\` \`scheduler: "cosine\_with\_warmup"\` | \[x\] Script Created | 2025-12-12 |
 | **3.3.2** | **Engineer Loss Weights** | **CRITICAL:** Boost the Focal Loss to penalize hallucinations. \`loss.focal\_loss\_weight: 5.0\` (High priority for Presence) \`loss.dice\_loss\_weight: 1.0\` \`loss.iou\_loss\_weight: 1.0\` | \[ \] Pending |  |
 | **3.3.3** | **Freeze Backbone** | Set `model.backbone.freeze: True`. This limits gradients to the Mask Decoder and Presence Head, saving VRAM and training time. | \[ \] Pending |  |
 
