@@ -38,4 +38,7 @@ wheels/
 Thumbs.db
 checkpoints/sam3.pt
 wandb/*
-data/*
+# DVC: Ignore data files but track .dvc files
+data/**
+!data/**/*.dvc
+!data/.gitignore

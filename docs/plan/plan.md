@@ -82,7 +82,7 @@ This phase establishes the foundational hardware and software stack required to 
 | :---- | :---- | :---- | :---- | :---- |
 | **2.4.1** | **Generate JSON Artifacts** | Run script to output `chicken_train.json` (80%) and `chicken_val.json` (20%). Ensure stratified sampling so both sets contain "Not-Chicken" examples. | \[x\] Script Created | 2025-12-12 |
 | **2.4.2** | **Schema Validation** | Use `pycocotools` or a custom schema validator to check for type errors (e.g., ensure `id` is int, `segmentation` is list of lists). | \[x\] Script Created | 2025-12-12 |
-| **2.4.3** | **Version Data with DVC** | Commit the new JSONs and the raw image directory to DVC: \`dvc add data/images\` \`dvc add data/annotations\` \`git commit \-m "Create v1.0 SA-Co dataset"\` | \[ \] Pending |  |
+| **2.4.3** | **Version Data with DVC** | Commit the new JSONs and the raw image directory to DVC: \`dvc add data/images\` \`dvc add data/annotations\` \`git commit \-m "Create v1.0 SA-Co dataset"\` | \[x\] Script Created | 2025-12-12 |
 
 ---
 
@@ -94,8 +94,8 @@ This phase establishes the foundational hardware and software stack required to 
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **3.1.1** | **Run Zero-Shot Inference** | Execute the evaluation script using the base checkpoint: \`python sam3/eval/evaluate.py \--config configs/base\_eval.yaml \--checkpoint checkpoints/sam3\_vit\_h.pt \--json data/chicken\_val.json\` | \[ \] Pending |  |
-| **3.1.2** | **Calculate Baseline Metrics** | Log the initial scores: 1\. \*\*pmF1:\*\* (Likely high for generic objects) 2\. \*\*IL\_MCC:\*\* (Likely low/random, as the model may hallucinate chickens in empty barns). 3\. \*\*CGF1:\*\* (Composite score). | \[ \] Pending |  |
+| **3.1.1** | **Run Zero-Shot Inference** | Execute the evaluation script using the base checkpoint: \`python sam3/eval/evaluate.py \--config configs/base\_eval.yaml \--checkpoint checkpoints/sam3\_vit\_h.pt \--json data/chicken\_val.json\` | \[x\] Script Created | 2025-12-12 |
+| **3.1.2** | **Calculate Baseline Metrics** | Log the initial scores: 1\. \*\*pmF1:\*\* (Likely high for generic objects) 2\. \*\*IL\_MCC:\*\* (Likely low/random, as the model may hallucinate chickens in empty barns). 3\. \*\*CGF1:\*\* (Composite score). | \[x\] Script Created | 2025-12-12 |
 | **3.1.3** | **Analyze False Positives** | Manually inspect the "Not-Chicken" subset results. Confirm if the model detects background objects (straw, feeders) as chickens. This confirms the need for fine-tuning. | \[ \] Pending |  |
 
 #### **Step 3.2: Constructing the Hydra Configuration (`.yaml`)**
