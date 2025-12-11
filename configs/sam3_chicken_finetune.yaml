@@ -1,3 +1,4 @@
+# @package _global_
 defaults:
 - _self_
 paths:
@@ -206,8 +207,6 @@ trainer:
         max_val_queries: 50000
         training: true
         use_caching: false
-        use_text_prompts: true
-        prompt_column: text_input
         img_folder: ${chicken_dataset.img_dir}
         ann_file: ${chicken_dataset.train_json}
       shuffle: true
@@ -232,8 +231,6 @@ trainer:
         max_ann_per_img: 100000
         multiplier: 1
         training: false
-        use_text_prompts: true
-        prompt_column: text_input
       shuffle: false
       batch_size: ${scratch.val_batch_size}
       num_workers: ${scratch.num_val_workers}
@@ -318,8 +315,6 @@ trainer:
   checkpoint:
     save_dir: ${launcher.experiment_log_dir}/checkpoints
     save_freq: 0
-    monitor: val_loss
-    save_top_k: 3
   logging:
     tensorboard_writer:
       _target_: sam3.train.utils.logger.make_tensorboard_logger

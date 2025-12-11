@@ -10,26 +10,6 @@ echo "Task 1.2.3: Install PyTorch"
 echo "=========================================="
 echo ""
 
-# Check if virtual environment exists
-VENV_DIR=".venv"
-if [ ! -d "$VENV_DIR" ]; then
-    echo "ERROR: Virtual environment not found at '$VENV_DIR'"
-    echo ""
-    echo "Please run task 1.2.2 first to create the virtual environment:"
-    echo "  bash scripts/task_122_create_virtual_environment.sh"
-    exit 1
-fi
-
-# Determine Python executable in venv
-if [ -f "$VENV_DIR/bin/python" ]; then
-    PYTHON_EXE="$VENV_DIR/bin/python"
-elif [ -f "$VENV_DIR/Scripts/python.exe" ]; then
-    PYTHON_EXE="$VENV_DIR/Scripts/python.exe"
-else
-    echo "ERROR: Could not find Python executable in '$VENV_DIR'"
-    exit 1
-fi
-
 # Check if uv is available
 if ! command -v uv &> /dev/null; then
     echo "ERROR: uv is not installed or not in PATH"
@@ -39,9 +19,11 @@ if ! command -v uv &> /dev/null; then
     exit 1
 fi
 
-# Check if virtual environment is activated (for uv)
-if [ -z "$VIRTUAL_ENV" ]; then
-    echo "Virtual environment not activated. Will use venv Python directly."
+# Ensure virtual environment exists (uv will create it if needed)
+VENV_DIR=".venv"
+if [ ! -d "$VENV_DIR" ]; then
+    echo "Virtual environment not found. Creating with uv..."
+    uv venv
     echo ""
 fi
 
@@ -79,16 +61,16 @@ if command -v nvcc &> /dev/null; then
 fi
 
 # Check if PyTorch is already installed
-if "$PYTHON_EXE" -c "import torch" 2>/dev/null; then
-    TORCH_VERSION=$("$PYTHON_EXE" -c "import torch; print(torch.__version__)" 2>/dev/null)
-    CUDA_AVAILABLE=$("$PYTHON_EXE" -c "import torch; print(torch.cuda.is_available())" 2>/dev/null)
+if uv run python -c "import torch" 2>/dev/null; then
+    TORCH_VERSION=$(uv run python -c "import torch; print(torch.__version__)" 2>/dev/null)
+    CUDA_AVAILABLE=$(uv run python -c "import torch; print(torch.cuda.is_available())" 2>/dev/null)
     echo "PyTorch is already installed:"
     echo "  Version: $TORCH_VERSION"
     echo "  CUDA Available: $CUDA_AVAILABLE"
     echo ""
     
     if [ "$CUDA_AVAILABLE" = "True" ]; then
-        CUDA_VERSION_PT=$("$PYTHON_EXE" -c "import torch; print(torch.version.cuda)" 2>/dev/null || echo "N/A")
+        CUDA_VERSION_PT=$(uv run python -c "import torch; print(torch.version.cuda)" 2>/dev/null || echo "N/A")
         echo "  PyTorch CUDA Version: $CUDA_VERSION_PT"
         echo ""
         echo "✓ PyTorch installation verified with CUDA support"
@@ -120,19 +102,19 @@ echo "----------------------------------------"
 echo "Verification:"
 echo "----------------------------------------"
 
-TORCH_VERSION=$("$PYTHON_EXE" -c "import torch; print(torch.__version__)" 2>/dev/null || echo "N/A")
-CUDA_AVAILABLE=$("$PYTHON_EXE" -c "import torch; print(torch.cuda.is_available())" 2>/dev/null || echo "False")
+TORCH_VERSION=$(uv run python -c "import torch; print(torch.__version__)" 2>/dev/null || echo "N/A")
+CUDA_AVAILABLE=$(uv run python -c "import torch; print(torch.cuda.is_available())" 2>/dev/null || echo "False")
 
 echo "PyTorch Version: $TORCH_VERSION"
 echo "CUDA Available: $CUDA_AVAILABLE"
 
 if [ "$CUDA_AVAILABLE" = "True" ]; then
-    CUDA_VERSION_PT=$("$PYTHON_EXE" -c "import torch; print(torch.version.cuda)" 2>/dev/null || echo "N/A")
-    GPU_COUNT=$("$PYTHON_EXE" -c "import torch; print(torch.cuda.device_count())" 2>/dev/null || echo "0")
+    CUDA_VERSION_PT=$(uv run python -c "import torch; print(torch.version.cuda)" 2>/dev/null || echo "N/A")
+    GPU_COUNT=$(uv run python -c "import torch; print(torch.cuda.device_count())" 2>/dev/null || echo "0")
     echo "PyTorch CUDA Version: $CUDA_VERSION_PT"
     echo "GPU Count: $GPU_COUNT"
     if [ "$GPU_COUNT" -gt 0 ]; then
-        GPU_NAME=$("$PYTHON_EXE" -c "import torch; print(torch.cuda.get_device_name(0))" 2>/dev/null || echo "N/A")
+        GPU_NAME=$(uv run python -c "import torch; print(torch.cuda.get_device_name(0))" 2>/dev/null || echo "N/A")
         echo "GPU Name: $GPU_NAME"
     fi
     echo ""

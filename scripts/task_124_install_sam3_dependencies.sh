@@ -10,26 +10,6 @@ echo "Task 1.2.4: Install SAM 3 Dependencies"
 echo "=========================================="
 echo ""
 
-# Check if virtual environment exists
-VENV_DIR=".venv"
-if [ ! -d "$VENV_DIR" ]; then
-    echo "ERROR: Virtual environment not found at '$VENV_DIR'"
-    echo ""
-    echo "Please run task 1.2.2 first to create the virtual environment:"
-    echo "  bash scripts/task_122_create_virtual_environment.sh"
-    exit 1
-fi
-
-# Determine Python executable in venv
-if [ -f "$VENV_DIR/bin/python" ]; then
-    PYTHON_EXE="$VENV_DIR/bin/python"
-elif [ -f "$VENV_DIR/Scripts/python.exe" ]; then
-    PYTHON_EXE="$VENV_DIR/Scripts/python.exe"
-else
-    echo "ERROR: Could not find Python executable in '$VENV_DIR'"
-    exit 1
-fi
-
 # Check if uv is available
 if ! command -v uv &> /dev/null; then
     echo "ERROR: uv is not installed or not in PATH"
@@ -39,9 +19,11 @@ if ! command -v uv &> /dev/null; then
     exit 1
 fi
 
-# Check if virtual environment is activated (for uv)
-if [ -z "$VIRTUAL_ENV" ]; then
-    echo "Virtual environment not activated. Will use venv Python directly."
+# Ensure virtual environment exists (uv will create it if needed)
+VENV_DIR=".venv"
+if [ ! -d "$VENV_DIR" ]; then
+    echo "Virtual environment not found. Creating with uv..."
+    uv venv
     echo ""
 fi
 
@@ -55,7 +37,7 @@ if [ ! -d "sam3" ]; then
 fi
 
 # Check if PyTorch is installed
-if ! "$PYTHON_EXE" -c "import torch" 2>/dev/null; then
+if ! uv run python -c "import torch" 2>/dev/null; then
     echo "ERROR: PyTorch is not installed"
     echo ""
     echo "Please run task 1.2.3 first to install PyTorch:"
@@ -115,24 +97,24 @@ echo "Verification:"
 echo "----------------------------------------"
 
 # Check SAM 3
-if "$PYTHON_EXE" -c "import sam3" 2>/dev/null; then
-    SAM3_VERSION=$("$PYTHON_EXE" -c "import sam3; print(getattr(sam3, '__version__', 'installed'))" 2>/dev/null || echo "installed")
+if uv run python -c "import sam3" 2>/dev/null; then
+    SAM3_VERSION=$(uv run python -c "import sam3; print(getattr(sam3, '__version__', 'installed'))" 2>/dev/null || echo "installed")
     echo "✓ SAM 3: $SAM3_VERSION"
 else
     echo "⚠ WARNING: Could not import sam3"
 fi
 
 # Check Hydra
-if "$PYTHON_EXE" -c "import hydra" 2>/dev/null; then
-    HYDRA_VERSION=$("$PYTHON_EXE" -c "import hydra; print(hydra.__version__)" 2>/dev/null || echo "installed")
+if uv run python -c "import hydra" 2>/dev/null; then
+    HYDRA_VERSION=$(uv run python -c "import hydra; print(hydra.__version__)" 2>/dev/null || echo "installed")
     echo "✓ Hydra: $HYDRA_VERSION"
 else
     echo "⚠ WARNING: Could not import hydra"
 fi
 
 # Check Submitit
-if "$PYTHON_EXE" -c "import submitit" 2>/dev/null; then
-    SUBMITIT_VERSION=$("$PYTHON_EXE" -c "import submitit; print(getattr(submitit, '__version__', 'installed'))" 2>/dev/null || echo "installed")
+if uv run python -c "import submitit" 2>/dev/null; then
+    SUBMITIT_VERSION=$(uv run python -c "import submitit; print(getattr(submitit, '__version__', 'installed'))" 2>/dev/null || echo "installed")
     echo "✓ Submitit: $SUBMITIT_VERSION"
 else
     echo "⚠ WARNING: Could not import submitit"
