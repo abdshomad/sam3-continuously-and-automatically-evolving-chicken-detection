@@ -58,6 +58,147 @@ def load_consolidated_dataset(dataset_file):
     except Exception as e:
         return None, f"Error reading dataset file: {e}"
 
+def consolidate_from_etl_outputs(base_path):
+    """
+    Consolidate dataset from existing ETL output files.
+    Combines image_metadata.json and negative_images_processed.json into SA-Co format.
+    """
+    image_metadata_file = base_path / 'image_metadata.json'
+    negative_images_file = base_path / 'negative_images_processed.json'
+    yolo_conversions_file = base_path / 'yolo_to_polygon_conversions.json'
+    labelme_conversions_file = base_path / 'labelme_to_polygon_conversions.json'
+    
+    images = []
+    images_by_id = {}  # Track images by ID to avoid duplicates
+    annotations = []
+    image_id_to_annotations = defaultdict(list)
+    annotation_id_counter = 1
+    
+    # Load image metadata
+    if image_metadata_file.exists():
+        try:
+            with open(image_metadata_file, 'r', encoding='utf-8') as f:
+                metadata_data = json.load(f)
+                if 'images' in metadata_data:
+                    for img in metadata_data['images']:
+                        img_id = img.get('id')
+                        if img_id is not None and img_id not in images_by_id:
+                            images_by_id[img_id] = img
+                    print(f"  Loaded {len(metadata_data['images'])} images from image_metadata.json")
+        except Exception as e:
+            print(f"  ⚠ Warning: Could not load image_metadata.json: {e}")
+    
+    # Load negative images (avoid duplicates)
+    if negative_images_file.exists():
+        try:
+            with open(negative_images_file, 'r', encoding='utf-8') as f:
+                negative_data = json.load(f)
+                if 'negative_images' in negative_data:
+                    added_count = 0
+                    duplicate_count = 0
+                    for img in negative_data['negative_images']:
+                        img_id = img.get('id')
+                        if img_id is not None:
+                            if img_id not in images_by_id:
+                                images_by_id[img_id] = img
+                                added_count += 1
+                            else:
+                                duplicate_count += 1
+                    print(f"  Loaded {len(negative_data['negative_images'])} negative images ({added_count} new, {duplicate_count} duplicates skipped)")
+        except Exception as e:
+            print(f"  ⚠ Warning: Could not load negative_images_processed.json: {e}")
+    
+    # Convert dict to list
+    images = list(images_by_id.values())
+    
+    # Load annotations from YOLO conversions
+    if yolo_conversions_file.exists():
+        try:
+            with open(yolo_conversions_file, 'r', encoding='utf-8') as f:
+                yolo_data = json.load(f)
+                if 'conversions' in yolo_data:
+                    for conv in yolo_data['conversions']:
+                        image_file = conv.get('image_file', '')
+                        # Find matching image by file_name
+                        for img in images:
+                            if img.get('file_name') == image_file or img.get('file_name', '').endswith(Path(image_file).name):
+                                img_id = img.get('id')
+                                if img_id:
+                                    for poly_data in conv.get('polygons', []):
+                                        polygon = poly_data.get('polygon', [])
+                                        bbox = poly_data.get('bbox', [])
+                                        
+                                        ann = {
+                                            'id': annotation_id_counter,
+                                            'image_id': img_id,
+                                            'category_id': 1,
+                                            'segmentation': [polygon],  # List of polygons
+                                            'bbox': bbox,
+                                            'area': poly_data.get('area', 0.0),
+                                            'iscrowd': 0
+                                        }
+                                        image_id_to_annotations[img_id].append(ann)
+                                        annotation_id_counter += 1
+                    if yolo_data['conversions']:
+                        print(f"  Processed {len(yolo_data['conversions'])} YOLO conversions")
+        except Exception as e:
+            print(f"  ⚠ Warning: Could not load YOLO conversions: {e}")
+    
+    # Load annotations from LabelMe conversions
+    if labelme_conversions_file.exists():
+        try:
+            with open(labelme_conversions_file, 'r', encoding='utf-8') as f:
+                labelme_data = json.load(f)
+                if 'conversions' in labelme_data:
+                    for conv in labelme_data['conversions']:
+                        image_file = conv.get('image_file', '')
+                        # Find matching image by file_name
+                        for img in images:
+                            if img.get('file_name') == image_file or img.get('file_name', '').endswith(Path(image_file).name):
+                                img_id = img.get('id')
+                                if img_id:
+                                    for poly_data in conv.get('polygons', []):
+                                        polygon = poly_data.get('points_flat', [])
+                                        
+                                        ann = {
+                                            'id': annotation_id_counter,
+                                            'image_id': img_id,
+                                            'category_id': 1,
+                                            'segmentation': [polygon],  # List of polygons
+                                            'bbox': poly_data.get('bbox', []),
+                                            'area': poly_data.get('area', 0.0),
+                                            'iscrowd': 0
+                                        }
+                                        image_id_to_annotations[img_id].append(ann)
+                                        annotation_id_counter += 1
+                    if labelme_data['conversions']:
+                        print(f"  Processed {len(labelme_data['conversions'])} LabelMe conversions")
+        except Exception as e:
+            print(f"  ⚠ Warning: Could not load LabelMe conversions: {e}")
+    
+    # Flatten annotations
+    for img_id, anns in image_id_to_annotations.items():
+        annotations.extend(anns)
+    
+    # Create consolidated dataset
+    consolidated = {
+        'info': {
+            'description': 'Chicken Detection Dataset (Consolidated from ETL outputs)',
+            'version': '1.0',
+            'year': 2025
+        },
+        'images': images,
+        'annotations': annotations,
+        'categories': [
+            {
+                'id': 1,
+                'name': 'chicken'
+            }
+        ]
+    }
+    
+    return consolidated
+
 def separate_positive_negative(images, annotations):
     """Separate images into positive (with annotations) and negative (without annotations)."""
     # Get set of image_ids that have annotations
@@ -281,22 +422,41 @@ def main():
     print("")
     
     # Load dataset
-    if dataset_file is None or not dataset_file.exists():
-        print("⚠ Warning: No consolidated dataset file found.")
-        print(f"  Expected: {consolidated_dataset} or {etl_output}")
+    dataset = None
+    if dataset_file is not None and dataset_file.exists():
+        print(f"Loading consolidated dataset from: {dataset_file.relative_to(project_root)}")
         print("")
-        print("  This script expects a consolidated SA-Co format JSON file from ETL processing.")
-        print("  Please run ETL processing steps first (tasks 2.2.x and 2.3.x).")
+        dataset, error = load_consolidated_dataset(dataset_file)
+        if dataset is None:
+            print(f"ERROR: {error}", file=sys.stderr)
+            return 1
+    else:
+        # Try to consolidate from ETL outputs
+        print("No consolidated dataset file found. Attempting to consolidate from ETL outputs...")
         print("")
-        return 1
-    
-    print(f"Loading consolidated dataset from: {dataset_file.relative_to(project_root)}")
-    print("")
-    
-    dataset, error = load_consolidated_dataset(dataset_file)
-    if dataset is None:
-        print(f"ERROR: {error}", file=sys.stderr)
-        return 1
+        print("Looking for ETL output files:")
+        print("  - image_metadata.json")
+        print("  - negative_images_processed.json")
+        print("  - yolo_to_polygon_conversions.json")
+        print("  - labelme_to_polygon_conversions.json")
+        print("")
+        
+        dataset = consolidate_from_etl_outputs(base_path)
+        
+        if not dataset or not dataset.get('images'):
+            print("⚠ Warning: Could not consolidate dataset from ETL outputs.")
+            print(f"  Expected consolidated file: {consolidated_dataset} or {etl_output}")
+            print("")
+            print("  This script expects either:")
+            print("  1. A consolidated SA-Co format JSON file from ETL processing, OR")
+            print("  2. ETL output files (image_metadata.json, negative_images_processed.json, etc.)")
+            print("")
+            print("  Please run ETL processing steps first (tasks 2.2.x and 2.3.x).")
+            print("")
+            return 1
+        
+        print(f"✓ Successfully consolidated dataset from ETL outputs")
+        print("")
     
     # Extract images and annotations
     images = dataset.get('images', [])

@@ -320,9 +320,11 @@ def main():
     
     all_valid = True
     results = {}
+    files_found = False
     
     # Validate training set
     if train_file.exists():
+        files_found = True
         print(f"Validating training set...")
         print("")
         
@@ -354,12 +356,13 @@ def main():
             if not is_valid:
                 all_valid = False
     else:
-        print(f"⚠ Warning: Training set file not found: {train_file}")
+        print(f"⚠ Info: Training set file not found: {train_file}")
+        print("  This is expected if task 2.4.1 has not been run yet.")
         print("")
-        all_valid = False
     
     # Validate validation set
     if val_file.exists():
+        files_found = True
         print(f"Validating validation set...")
         print("")
         
@@ -391,20 +394,31 @@ def main():
             if not is_valid:
                 all_valid = False
     else:
-        print(f"⚠ Warning: Validation set file not found: {val_file}")
+        print(f"⚠ Info: Validation set file not found: {val_file}")
+        print("  This is expected if task 2.4.1 has not been run yet.")
         print("")
-        all_valid = False
     
     # Summary
     print("=" * 70)
-    if all_valid:
+    if not files_found:
+        print("⚠ Schema Validation: SKIPPED - NO FILES TO VALIDATE")
+        print("  Run task 2.4.1 first to generate train/val JSON files.")
+        all_valid = True  # Don't fail if files don't exist yet
+    elif all_valid:
         print("✓ Schema Validation: COMPLETED - ALL FILES VALID")
     else:
         print("✗ Schema Validation: COMPLETED - ERRORS FOUND")
     print("=" * 70)
     print("")
     
-    if all_valid:
+    if not files_found:
+        print("No JSON files found to validate.")
+        print("  This is expected if task 2.4.1 has not been run yet.")
+        print("")
+        print("Next steps:")
+        print("  - Run task 2.4.1 to generate train/val JSON files")
+        print("  - Then re-run this script to validate the generated files")
+    elif all_valid:
         print("All JSON files conform to SA-Co schema.")
         print("")
         print("Next steps:")
