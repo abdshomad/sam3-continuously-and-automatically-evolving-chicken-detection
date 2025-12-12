@@ -154,8 +154,8 @@ This phase executes the training process defined in **PRD Chapter 5**, applying 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
 | **4.3.1** | **Configure Checkpoint Callback** | Ensure Hydra config saves top-k checkpoints based on validation loss: \`checkpoint.monitor: "val\_loss"\` \`checkpoint.save\_top\_k: 3\` | \[x\] Script Created | 2025-12-12 |
-| **4.3.2** | **Register Artifacts** | Upon training completion, tag the best checkpoint (`best.pt`) in the Model Registry (or WandB Artifacts) with the DVC Commit Hash used for training. | \[ \] Pending |  |
-| **4.3.3** | **Archive Config** | Save the resolved `config.yaml` alongside the model weights to ensure the experiment is reproducible. | \[ \] Pending |  |
+| **4.3.2** | **Register Artifacts** | Upon training completion, tag the best checkpoint (`best.pt`) in the Model Registry (or WandB Artifacts) with the DVC Commit Hash used for training. | \[x\] Script Created | 2025-12-12 |
+| **4.3.3** | **Archive Config** | Save the resolved `config.yaml` alongside the model weights to ensure the experiment is reproducible. | \[x\] Script Created | 2025-12-12 |
 
 ---
 
@@ -171,7 +171,7 @@ This phase executes the rigorous evaluation protocol defined in **PRD Chapter 8*
 
 | Task ID | Task Description | Technical Details / Commands | Status | Implementation Date |
 | :---- | :---- | :---- | :---- | :---- |
-| **5.1.1** | **Run Evaluation Script** | Execute evaluation using the fine-tuned checkpoint: \`python sam3/eval/evaluate.py \--config configs/eval\_chicken.yaml \--checkpoint checkpoints/best.pt \--json data/chicken\_val.json\` | \[ \] Pending |  |
+| **5.1.1** | **Run Evaluation Script** | Execute evaluation using the fine-tuned checkpoint: \`python sam3/eval/evaluate.py \--config configs/eval\_chicken.yaml \--checkpoint checkpoints/best.pt \--json data/chicken\_val.json\` | \[x\] Script Created | 2025-12-12 |
 | **5.1.2** | **Extract Component Metrics** | Parse the output logs to retrieve: 1\. \*\*pmF1\*\* (Prompt-Mask F1): Mask precision on positive detections. 2\. \*\*IL\_MCC\*\* (Matthews Correlation Coeff): Binary classification accuracy. | \[ \] Pending |  |
 | **5.1.3** | **Compute CGF1 Score** | Calculate the final composite score: $$CGF1 \= pmF1 \\times IL\\\_MCC$$ Record this value in the Experiment Tracker (WandB). | \[ \] Pending |  |
 
