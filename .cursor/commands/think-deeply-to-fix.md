@@ -1,0 +1,1 @@
+Think deeply untill you come up with 3 best options. try ecah of these option until succeeded. if not yet succeeded. ask me to continue come up with another 3 options and try them all. Do this untill we found the solution. c
