@@ -1,0 +1,8 @@
+{
+  "pmF1": 0.0,
+  "IL_MCC": 0.0,
+  "CGF1": 0.0,
+  "iou_type": "segm",
+  "gt_path": "/home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/data/chicken_val.json",
+  "pred_path": "/home/aiserver/LABS/SAM3/sam3-continuously-and-automatically-evolving-chicken-detection/results/zero_shot_baseline/dumps/chicken_val/coco_predictions_segm.json"
+}

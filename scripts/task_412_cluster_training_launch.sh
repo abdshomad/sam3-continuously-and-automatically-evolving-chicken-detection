@@ -107,6 +107,16 @@ fi
 echo "Copying config file to SAM3 configs directory..."
 cp "$CONFIG_FILE" "$SAM3_CONFIG_PATH"
 
+# Add @package _global_ header if not present (required by Hydra)
+if ! grep -q "^# @package _global_" "$SAM3_CONFIG_PATH"; then
+    echo "Adding @package _global_ header..."
+    sed -i '1i# @package _global_' "$SAM3_CONFIG_PATH"
+    # Add blank line after header if needed
+    if ! sed -n '2p' "$SAM3_CONFIG_PATH" | grep -q "^$"; then
+        sed -i '1a\' "$SAM3_CONFIG_PATH"
+    fi
+fi
+
 # Update checkpoint path BEFORE replacing project_root if we found a different checkpoint
 if [ -n "$CHECKPOINT_PATH" ] && [ "$(basename "$CHECKPOINT_PATH")" != "sam3_vit_h.pt" ]; then
     echo "Updating checkpoint path in config to: $CHECKPOINT_PATH"

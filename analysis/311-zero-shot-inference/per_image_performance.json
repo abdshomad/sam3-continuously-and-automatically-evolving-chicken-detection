@@ -1,0 +1,4262 @@
+[
+  {
+    "image_id": 745929087,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000052 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 119729778,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000027 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 86342815,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000059 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 124,
+    "avg_prediction_score": 0.645885564516129,
+    "max_prediction_score": 0.85156,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 963803786,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000056 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 109,
+    "avg_prediction_score": 0.7144315596330275,
+    "max_prediction_score": 0.91406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 620273200,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000010 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 428617651,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000014 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 328915726,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000029 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 758314874,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000044 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 508159751,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000057.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 79113141,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000008 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 583498793,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000019 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 29,
+    "avg_prediction_score": 0.4541344827586207,
+    "max_prediction_score": 0.62109,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 433148774,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000038 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 258020412,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000006.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 807930880,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000005 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 650761241,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000017 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 88570041,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000054 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 461214066,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000018 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 20,
+    "avg_prediction_score": 0.368652,
+    "max_prediction_score": 0.43555,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 10882975,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000019 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 808033219,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000055.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 685193616,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000027.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 555469317,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000004 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 840126198,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000055 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 118,
+    "avg_prediction_score": 0.7017343220338983,
+    "max_prediction_score": 0.85938,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 957236031,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000037 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 708573443,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000025 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 727507263,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000043.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 941045234,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000017 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 33,
+    "avg_prediction_score": 0.4794042424242424,
+    "max_prediction_score": 0.69141,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 133776800,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000031 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 903338578,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000050 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 580532266,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000017.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 919272400,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000026 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 53928415,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000055 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 402284302,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000023 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 12,
+    "avg_prediction_score": 0.3828116666666667,
+    "max_prediction_score": 0.52734,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 746627038,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000023.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 59,
+    "avg_prediction_score": 0.6738622033898305,
+    "max_prediction_score": 0.80469,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 164259337,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000023.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 157270874,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000010 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 74,
+    "avg_prediction_score": 0.8073005405405406,
+    "max_prediction_score": 0.94922,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 402479478,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000016.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 97012209,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000009 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 938083411,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000018.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 101,
+    "avg_prediction_score": 0.6297183168316832,
+    "max_prediction_score": 0.80859,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 233280849,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000002 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 142342537,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000021 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 39813096,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000047.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 84,
+    "avg_prediction_score": 0.7308872619047619,
+    "max_prediction_score": 0.90625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 864820862,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000009 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 860167420,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000001 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 5,
+    "avg_prediction_score": 0.345312,
+    "max_prediction_score": 0.39844,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 227152422,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000035 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 691716114,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000017 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 100,
+    "avg_prediction_score": 0.5105278,
+    "max_prediction_score": 0.61719,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 325971982,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000002.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 87881536,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000021 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 21,
+    "avg_prediction_score": 0.40773761904761907,
+    "max_prediction_score": 0.51562,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 450915889,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000055 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 120,
+    "avg_prediction_score": 0.7897300833333334,
+    "max_prediction_score": 0.92969,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 421215968,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000002 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 27,
+    "avg_prediction_score": 0.4607925925925926,
+    "max_prediction_score": 0.6875,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 274222874,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000019 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 120,
+    "avg_prediction_score": 0.78686525,
+    "max_prediction_score": 0.92188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 74122254,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000037 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 994046298,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000032 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 2,
+    "avg_prediction_score": 0.31543,
+    "max_prediction_score": 0.32617,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 665511499,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000015 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 136242210,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000036.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 845400329,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000015 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 194757444,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000049.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 90,
+    "avg_prediction_score": 0.7576603333333334,
+    "max_prediction_score": 0.91016,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 426371846,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000047 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 389844695,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000010 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 943671453,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000009.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 629803464,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000054.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 153490540,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000043.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 98,
+    "avg_prediction_score": 0.6087368367346939,
+    "max_prediction_score": 0.70312,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 996288855,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000044 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 122,
+    "avg_prediction_score": 0.5905483606557377,
+    "max_prediction_score": 0.80469,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 190103590,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000064.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 68062246,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000025 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 749555836,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000051.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 21,
+    "avg_prediction_score": 0.41796904761904763,
+    "max_prediction_score": 0.70703,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 102294640,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000038 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 840274402,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000031 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 994193977,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000036 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 116,
+    "avg_prediction_score": 0.46541681034482757,
+    "max_prediction_score": 0.60938,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 705811621,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000005 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 921459755,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000041 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 21070096,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000003 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 768900418,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000019 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 419504799,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000031 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 24,
+    "avg_prediction_score": 0.41886375000000003,
+    "max_prediction_score": 0.51562,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 787722712,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000020 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 751896884,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000007 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 489675198,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000021 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 469105331,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000004.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 765088191,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000011 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 866044807,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000006 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 265767408,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000040.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 916573278,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000007 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 90,
+    "avg_prediction_score": 0.43934455555555557,
+    "max_prediction_score": 0.8125,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 601674988,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000014 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 347575893,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000006 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 732504061,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000019 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 28,
+    "avg_prediction_score": 0.4561935714285714,
+    "max_prediction_score": 0.56641,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 312345501,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000044 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 128,
+    "avg_prediction_score": 0.63647453125,
+    "max_prediction_score": 0.88672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 468660225,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000005 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 398408371,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000059 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 123,
+    "avg_prediction_score": 0.6456585365853659,
+    "max_prediction_score": 0.78125,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 618331396,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000050 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 9926015,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000001.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 726416820,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000020 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 218902392,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000012 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 752709068,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000012 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 30901864,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000008.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 860773903,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000042.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 425305006,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000053 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 108,
+    "avg_prediction_score": 0.7018050925925926,
+    "max_prediction_score": 0.88672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 384393117,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000050.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 80,
+    "avg_prediction_score": 0.77724575,
+    "max_prediction_score": 0.89453,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 828739483,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000034 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 835505142,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000041.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 118,
+    "avg_prediction_score": 0.77981,
+    "max_prediction_score": 0.90625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 174522039,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000014.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 66,
+    "avg_prediction_score": 0.38047515151515154,
+    "max_prediction_score": 0.47461,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 798547797,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000023.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 973128618,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000026 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 129,
+    "avg_prediction_score": 0.5557020930232558,
+    "max_prediction_score": 0.75391,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 381133132,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000037 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 107591248,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000054.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 20,
+    "avg_prediction_score": 0.40498200000000006,
+    "max_prediction_score": 0.54688,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 613454000,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000022 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 58,
+    "avg_prediction_score": 0.7269660344827586,
+    "max_prediction_score": 0.91406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 33057730,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000025 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 795924150,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000023.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 698314661,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000003.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 423391731,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000040 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 116,
+    "avg_prediction_score": 0.49321456896551724,
+    "max_prediction_score": 0.63672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 998365922,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000008 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 124371915,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000019.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 101,
+    "avg_prediction_score": 0.6910776237623762,
+    "max_prediction_score": 0.86328,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 652778266,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000001.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 700992569,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000026 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 395469171,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000008 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 941970762,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000036 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 113,
+    "avg_prediction_score": 0.4608858407079646,
+    "max_prediction_score": 0.55469,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 486542442,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000035.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 60,
+    "avg_prediction_score": 0.678125,
+    "max_prediction_score": 0.79297,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 398724411,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000005 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 31,
+    "avg_prediction_score": 0.7259954838709677,
+    "max_prediction_score": 0.94922,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 129723498,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000015 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 28,
+    "avg_prediction_score": 0.4294085714285715,
+    "max_prediction_score": 0.56641,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 729121137,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000055 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 138069263,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000019 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 34,
+    "avg_prediction_score": 0.48196176470588237,
+    "max_prediction_score": 0.60156,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 847757563,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000018.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 328082168,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000042 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 307904058,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000036 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 660052026,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000024 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 298557604,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000039.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 630106332,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000013 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 333314813,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000009 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 134,
+    "avg_prediction_score": 0.6764809701492537,
+    "max_prediction_score": 0.88672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 179234049,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000025.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 38,
+    "avg_prediction_score": 0.40316605263157895,
+    "max_prediction_score": 0.47852,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 117925342,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000010 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 176006,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000050 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 59,
+    "avg_prediction_score": 0.3286216949152542,
+    "max_prediction_score": 0.35742,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 335848535,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000054 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 91,
+    "avg_prediction_score": 0.7311124175824175,
+    "max_prediction_score": 0.9375,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 504196044,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000043 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 120,
+    "avg_prediction_score": 0.6278321666666666,
+    "max_prediction_score": 0.82812,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 491977871,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000045 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 958183502,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000026 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 546852702,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000005 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 139,
+    "avg_prediction_score": 0.6793788489208633,
+    "max_prediction_score": 0.84766,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 443887088,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000022 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 74,
+    "avg_prediction_score": 0.6588102702702703,
+    "max_prediction_score": 0.79297,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 744862394,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000001.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 96,
+    "avg_prediction_score": 0.7127480208333333,
+    "max_prediction_score": 0.92188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 108063251,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000013.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 118,
+    "avg_prediction_score": 0.5251096610169492,
+    "max_prediction_score": 0.66406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 209855384,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000037 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 868881951,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000032 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 968599137,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000059.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 391745416,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000037.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 63,
+    "avg_prediction_score": 0.3398123809523809,
+    "max_prediction_score": 0.38672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 800384331,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000030 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 756478537,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000031 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 973279918,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000009.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 36,
+    "avg_prediction_score": 0.8149952777777778,
+    "max_prediction_score": 0.95703,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 322141130,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000020.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 436775093,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000050 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 99,
+    "avg_prediction_score": 0.8005243434343434,
+    "max_prediction_score": 0.90234,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 39619370,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000016.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 89,
+    "avg_prediction_score": 0.39356584269662925,
+    "max_prediction_score": 0.44727,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 665192313,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000033 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 607277907,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000033 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 579604425,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000022 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 986566072,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000034 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 25,
+    "avg_prediction_score": 0.39375,
+    "max_prediction_score": 0.52344,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 214646634,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000003 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 95,
+    "avg_prediction_score": 0.7482730526315788,
+    "max_prediction_score": 0.92578,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 864542163,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000028 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 296941826,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000050.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 797813856,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000015.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 788672993,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000003 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 422483386,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000010 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 459038661,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000029 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 683949066,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000056 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 123,
+    "avg_prediction_score": 0.7236095121951219,
+    "max_prediction_score": 0.88281,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 607705213,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000019 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 819493463,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000018.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 54,
+    "avg_prediction_score": 0.33637055555555556,
+    "max_prediction_score": 0.4082,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 348587158,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000035 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 54,
+    "avg_prediction_score": 0.7662040740740741,
+    "max_prediction_score": 0.88672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 350583873,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000013 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 266197527,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000013 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 132,
+    "avg_prediction_score": 0.6996179545454545,
+    "max_prediction_score": 0.89453,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 149042848,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000039.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 827397836,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000057 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 111,
+    "avg_prediction_score": 0.5349103603603603,
+    "max_prediction_score": 0.67188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 310139202,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000074.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 865551921,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000025.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 120,
+    "avg_prediction_score": 0.44487391666666665,
+    "max_prediction_score": 0.55469,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 211865547,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000039 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 550808404,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000002 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 235592004,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000009.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 22313710,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000066 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 572091933,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000030 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 15,
+    "avg_prediction_score": 0.372266,
+    "max_prediction_score": 0.5,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 581162444,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000058.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 108,
+    "avg_prediction_score": 0.6487446296296296,
+    "max_prediction_score": 0.89062,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 681271607,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000016.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 655603774,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000054 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 25107997,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000008.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 465217799,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000021 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 19,
+    "avg_prediction_score": 0.3712978947368421,
+    "max_prediction_score": 0.48242,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 506680183,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000035.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 366706819,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000032 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 12,
+    "avg_prediction_score": 0.39013583333333335,
+    "max_prediction_score": 0.5,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 766198985,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000065.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 525870107,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000026 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 898689172,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000039 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 256164321,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000060 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 113,
+    "avg_prediction_score": 0.5028172566371681,
+    "max_prediction_score": 0.78906,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 420554212,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000003 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 473506947,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000023 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 153579051,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000057.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 97,
+    "avg_prediction_score": 0.41263278350515464,
+    "max_prediction_score": 0.5,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 34473229,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000010.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 779160000,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000002.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 310186290,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000033 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 317882407,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000053 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 114,
+    "avg_prediction_score": 0.663051754385965,
+    "max_prediction_score": 0.9375,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 436981730,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000010 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 28,
+    "avg_prediction_score": 0.46916785714285714,
+    "max_prediction_score": 0.84375,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 43997339,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000015 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 2,
+    "avg_prediction_score": 0.353515,
+    "max_prediction_score": 0.38672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 604019411,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000014 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 77,
+    "avg_prediction_score": 0.8026077922077922,
+    "max_prediction_score": 0.9375,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 666289132,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000054 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 137,
+    "avg_prediction_score": 0.7265049635036497,
+    "max_prediction_score": 0.90625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 795002977,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000026 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 27,
+    "avg_prediction_score": 0.7735103703703703,
+    "max_prediction_score": 0.91016,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 580204092,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000058 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 107,
+    "avg_prediction_score": 0.5636867289719626,
+    "max_prediction_score": 0.65625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 925667776,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000021.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 46,
+    "avg_prediction_score": 0.7575578260869564,
+    "max_prediction_score": 0.92578,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 367087413,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000018 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 72,
+    "avg_prediction_score": 0.7764486111111111,
+    "max_prediction_score": 0.90625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 117020674,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000029.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 852743155,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000004.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 365615856,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000035 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 93,
+    "avg_prediction_score": 0.7388060215053764,
+    "max_prediction_score": 0.89844,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 360515182,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000025 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 63,
+    "avg_prediction_score": 0.38451825396825395,
+    "max_prediction_score": 0.45312,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 46678141,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000034.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 66,
+    "avg_prediction_score": 0.7505624242424243,
+    "max_prediction_score": 0.875,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 768880751,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000062 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 70806708,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000037 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 629757952,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000008 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 966311110,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000007 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 52,
+    "avg_prediction_score": 0.35392903846153845,
+    "max_prediction_score": 0.41797,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 717902999,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000046 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 259734479,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000003.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 127,
+    "avg_prediction_score": 0.6118972440944882,
+    "max_prediction_score": 0.85156,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 77606007,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000053 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 892416033,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000037 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 514230932,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000018 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 708723941,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000027 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 10,
+    "avg_prediction_score": 0.330664,
+    "max_prediction_score": 0.36328,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 883082045,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000041.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 815479725,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000028 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 11,
+    "avg_prediction_score": 0.44975363636363636,
+    "max_prediction_score": 0.54688,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 855043820,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000037.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 555818668,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000011 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 18,
+    "avg_prediction_score": 0.3764094444444444,
+    "max_prediction_score": 0.48047,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 274652751,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000034 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 1757148,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000023 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 211110786,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000030 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 768067632,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000051.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 111,
+    "avg_prediction_score": 0.7045855855855856,
+    "max_prediction_score": 0.92578,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 981347346,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000010.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 171786172,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000054 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 126,
+    "avg_prediction_score": 0.5640349206349206,
+    "max_prediction_score": 0.73438,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 374912859,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000028 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 105,
+    "avg_prediction_score": 0.6294638095238095,
+    "max_prediction_score": 0.76953,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 787860489,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000051.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 517893905,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000058 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 121,
+    "avg_prediction_score": 0.6387530578512396,
+    "max_prediction_score": 0.76562,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 26973247,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000005.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 157450134,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000017 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 734413596,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000006 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 5,
+    "avg_prediction_score": 0.308982,
+    "max_prediction_score": 0.31445,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 627510994,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000038 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 501534530,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000039.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 900901768,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000052 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 34855655,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000035 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 284651706,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000005 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 193563960,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000020 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 861930336,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000005 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 37,
+    "avg_prediction_score": 0.4539170270270271,
+    "max_prediction_score": 0.71094,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 239022528,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000034 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 66,
+    "avg_prediction_score": 0.3357598484848485,
+    "max_prediction_score": 0.5625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 247472635,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000002 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 66,
+    "avg_prediction_score": 0.8006040909090909,
+    "max_prediction_score": 0.95312,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 666797356,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000046 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 818131941,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000049 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 91,
+    "avg_prediction_score": 0.7456207692307693,
+    "max_prediction_score": 0.92188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 61358357,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000026.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 80,
+    "avg_prediction_score": 0.58327575,
+    "max_prediction_score": 0.71094,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 963306787,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000023 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 461209116,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000050.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 431537440,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000021 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 18963568,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000006 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 24,
+    "avg_prediction_score": 0.4614245833333333,
+    "max_prediction_score": 0.70312,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 374836007,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000016.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 962968625,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000048 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 29,
+    "avg_prediction_score": 0.45379862068965515,
+    "max_prediction_score": 0.67188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 392212758,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000021.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 229866672,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000011 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 20,
+    "avg_prediction_score": 0.3844705,
+    "max_prediction_score": 0.53125,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 48220979,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000017 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 53189849,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000019.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 719793947,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000041 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 394909667,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000048 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 718482164,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000004 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 28,
+    "avg_prediction_score": 0.48863,
+    "max_prediction_score": 0.67578,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 159779428,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000024 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 65,
+    "avg_prediction_score": 0.6779138461538461,
+    "max_prediction_score": 0.84375,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 704479044,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000029 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 113620867,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000006.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 94139833,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000024 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 1,
+    "avg_prediction_score": 0.30273,
+    "max_prediction_score": 0.30273,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 159182445,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000009 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 326917559,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000057 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 982727614,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000016 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 121,
+    "avg_prediction_score": 0.7546159504132232,
+    "max_prediction_score": 0.91406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 109472359,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000061.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 36661296,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000041 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 266073885,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000008 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 717960933,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000025.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 25,
+    "avg_prediction_score": 0.7327356,
+    "max_prediction_score": 0.91797,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 858127650,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000039 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 769874662,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000016 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 74,
+    "avg_prediction_score": 0.3879587837837838,
+    "max_prediction_score": 0.71875,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 683415582,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000053 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 203043724,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000035.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 128,
+    "avg_prediction_score": 0.556320078125,
+    "max_prediction_score": 0.71094,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 297117538,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000061 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 699306597,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000005 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 49454212,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000041 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 104,
+    "avg_prediction_score": 0.6060508653846154,
+    "max_prediction_score": 0.82422,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 609636889,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000048 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 298403247,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000054 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 428713969,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000035 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 700310129,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000032 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 94,
+    "avg_prediction_score": 0.7095457446808511,
+    "max_prediction_score": 0.91797,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 266008692,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000003 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 112,
+    "avg_prediction_score": 0.695208125,
+    "max_prediction_score": 0.91016,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 432626822,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000002 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 60,
+    "avg_prediction_score": 0.500163,
+    "max_prediction_score": 0.70703,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 906573279,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000006.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 43761923,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000060.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 683165162,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000017 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 735851878,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000020 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 232193055,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000034 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 66,
+    "avg_prediction_score": 0.7869907575757575,
+    "max_prediction_score": 0.90234,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 689943628,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000007 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 91,
+    "avg_prediction_score": 0.76598989010989,
+    "max_prediction_score": 0.92188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 650509874,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000046 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 92,
+    "avg_prediction_score": 0.7829277173913043,
+    "max_prediction_score": 0.93359,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 81187441,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000019 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 49,
+    "avg_prediction_score": 0.7820463265306122,
+    "max_prediction_score": 0.90625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 268957043,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000008 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 108,
+    "avg_prediction_score": 0.7357492592592593,
+    "max_prediction_score": 0.87891,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 160992309,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000018 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 998396969,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000014 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 277650124,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000002 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 167509166,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000044 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 943398385,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000004 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 928577420,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000053.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 69137514,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000043.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 239174789,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000037 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 178283633,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000047 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 381289519,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000028 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 59,
+    "avg_prediction_score": 0.6942527118644067,
+    "max_prediction_score": 0.85938,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 406817273,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000014 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 61073149,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000002 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 38,
+    "avg_prediction_score": 0.47738421052631574,
+    "max_prediction_score": 0.61719,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 913549453,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000006.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 203816313,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000020 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 589575137,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000012.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 97,
+    "avg_prediction_score": 0.6068174226804124,
+    "max_prediction_score": 0.76562,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 854019134,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000044.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 537993698,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000011 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 385400069,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000008.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 71,
+    "avg_prediction_score": 0.7225738028169014,
+    "max_prediction_score": 0.92188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 451295317,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000032.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 51,
+    "avg_prediction_score": 0.33275843137254907,
+    "max_prediction_score": 0.37109,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 856408552,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000015 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 274918242,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000001.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 123,
+    "avg_prediction_score": 0.6323200000000001,
+    "max_prediction_score": 0.79297,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 335764652,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000016 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 552911395,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000050.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 643988816,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000017 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 515308080,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000021.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 733092656,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000008 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 783088401,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000062.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 599871137,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000025 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 49,
+    "avg_prediction_score": 0.7769448979591838,
+    "max_prediction_score": 0.91797,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 405480240,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000047 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 88,
+    "avg_prediction_score": 0.6911625,
+    "max_prediction_score": 0.87109,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 641925573,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000048.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 95,
+    "avg_prediction_score": 0.6196335789473684,
+    "max_prediction_score": 0.71484,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 391385208,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000001 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 456575690,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000006 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 932723050,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000009 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 419939120,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000004 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 37,
+    "avg_prediction_score": 0.7159521621621622,
+    "max_prediction_score": 0.96094,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 371091571,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000012 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 412467735,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000032 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 731105018,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000048.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 15,
+    "avg_prediction_score": 0.378126,
+    "max_prediction_score": 0.49414,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 606112642,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000034 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 126,
+    "avg_prediction_score": 0.4535433333333333,
+    "max_prediction_score": 0.62109,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 699077231,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000022.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 613648509,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000014 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 472419054,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000007 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 308214232,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000013 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 72,
+    "avg_prediction_score": 0.7776156944444444,
+    "max_prediction_score": 0.93359,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 729495180,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000040 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 19,
+    "avg_prediction_score": 0.37983052631578945,
+    "max_prediction_score": 0.47266,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 354443505,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000048 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 78,
+    "avg_prediction_score": 0.7751652564102565,
+    "max_prediction_score": 0.93359,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 906811227,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000050.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 88,
+    "avg_prediction_score": 0.802734090909091,
+    "max_prediction_score": 0.92578,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 708814145,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000035 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 515456306,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000018 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 558257561,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000037 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 431062002,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000024 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 991769574,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000009 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 24,
+    "avg_prediction_score": 0.4829925,
+    "max_prediction_score": 0.625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 483824031,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000017 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 887899158,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000001 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 744601277,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000008 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 79,
+    "avg_prediction_score": 0.7680969620253164,
+    "max_prediction_score": 0.91406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 555736880,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000034.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 806338171,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000049 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 581717545,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000061 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 124,
+    "avg_prediction_score": 0.7248933064516129,
+    "max_prediction_score": 0.85938,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 354056617,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000023 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 974885743,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000024 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 32928622,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000048 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 90,
+    "avg_prediction_score": 0.758116,
+    "max_prediction_score": 0.92188,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 283757378,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000047.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 149670539,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000035.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 132295624,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000046 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 23662594,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000004 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 406936210,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000006 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 983714400,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000032.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 112532451,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000006 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 18461164,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000025 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 333823879,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000041 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 86494622,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000029 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 706664140,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000037.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 36,
+    "avg_prediction_score": 0.3271483333333334,
+    "max_prediction_score": 0.36523,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 377561177,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000001 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 26,
+    "avg_prediction_score": 0.4680738461538461,
+    "max_prediction_score": 0.78125,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 511930559,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000047 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 20,
+    "avg_prediction_score": 0.385059,
+    "max_prediction_score": 0.47461,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 954277548,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000049 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 998340045,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000022 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 955167740,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000055 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 107,
+    "avg_prediction_score": 0.5353936448598131,
+    "max_prediction_score": 0.77344,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 984565385,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000058.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 122,
+    "avg_prediction_score": 0.6394249180327869,
+    "max_prediction_score": 0.83594,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 944127104,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000007 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 456099608,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000032 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 658097515,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000030.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 92,
+    "avg_prediction_score": 0.598781847826087,
+    "max_prediction_score": 0.70703,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 499191981,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000019 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 105,
+    "avg_prediction_score": 0.3882249523809524,
+    "max_prediction_score": 0.54297,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 129796775,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000017 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 622118579,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000016 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 740537974,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000013 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 722145467,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000014 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 719868800,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000001 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 2,
+    "avg_prediction_score": 0.30566,
+    "max_prediction_score": 0.30859,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 394031090,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000009 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 85660684,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000036 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 149056418,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000006 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 69,
+    "avg_prediction_score": 0.7948655072463768,
+    "max_prediction_score": 0.94141,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 918690654,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000031 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 978090373,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000019 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 77,
+    "avg_prediction_score": 0.7646105194805195,
+    "max_prediction_score": 0.91406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 979792182,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000028.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 93,
+    "avg_prediction_score": 0.3954561290322581,
+    "max_prediction_score": 0.46094,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 752741860,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000012 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 56,
+    "avg_prediction_score": 0.7229353571428572,
+    "max_prediction_score": 0.86328,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 249733576,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000007 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 96,
+    "avg_prediction_score": 0.4264527083333333,
+    "max_prediction_score": 0.51953,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 333692920,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000015.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 51,
+    "avg_prediction_score": 0.5034458823529412,
+    "max_prediction_score": 0.58203,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 183598280,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000026 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 348720399,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000034 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 6,
+    "avg_prediction_score": 0.3222683333333333,
+    "max_prediction_score": 0.34766,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 578499806,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000040.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 138,
+    "avg_prediction_score": 0.536033768115942,
+    "max_prediction_score": 0.72656,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 764206577,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000059.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 40,
+    "avg_prediction_score": 0.32065475,
+    "max_prediction_score": 0.34961,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 146124967,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000018.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 40,
+    "avg_prediction_score": 0.6434575,
+    "max_prediction_score": 0.80469,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 98598416,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000004 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 30917598,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000026 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 7,
+    "avg_prediction_score": 0.31278,
+    "max_prediction_score": 0.32031,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 389487713,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000038.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 397166060,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000035.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 110606028,
+    "file_name": "raw_data/images/chicken/2025-11-15-chicken-000060 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 336411304,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000028 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 1,
+    "avg_prediction_score": 0.31836,
+    "max_prediction_score": 0.31836,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 371995433,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000025 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 110,
+    "avg_prediction_score": 0.4689102727272727,
+    "max_prediction_score": 0.5625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 273138082,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000004.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 708028214,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000013 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 126,
+    "avg_prediction_score": 0.6856243650793651,
+    "max_prediction_score": 0.86719,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 424842636,
+    "file_name": "raw_data/images/chicken/2025-10-23-chicken-000015 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 839337566,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000053 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 388942340,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000038 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 828478731,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000051 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 803932347,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000029 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 802634103,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000016.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 87,
+    "avg_prediction_score": 0.6771508045977012,
+    "max_prediction_score": 0.875,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 192948248,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000030 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 720215619,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000045 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 91,
+    "avg_prediction_score": 0.7768073626373626,
+    "max_prediction_score": 0.90625,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 741889711,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000051.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 70,
+    "avg_prediction_score": 0.7745527142857144,
+    "max_prediction_score": 0.91016,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 486729809,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000007.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 22,
+    "avg_prediction_score": 0.32306545454545454,
+    "max_prediction_score": 0.35938,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 335870451,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000028 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 719023992,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000053 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 151371933,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000034 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 79,
+    "avg_prediction_score": 0.4569816455696203,
+    "max_prediction_score": 0.62891,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 353203901,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000011 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 111,
+    "avg_prediction_score": 0.4289836036036036,
+    "max_prediction_score": 0.63672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 526910863,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000007 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 12,
+    "avg_prediction_score": 0.3271483333333333,
+    "max_prediction_score": 0.3418,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 757801311,
+    "file_name": "raw_data/images/not_chicken/2025-10-23-chicken-000013 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 76165206,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000010 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 437729254,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000005.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 742611684,
+    "file_name": "raw_data/images/chicken/2025-10-25-chicken-000025 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 807912910,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000039 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 84,
+    "avg_prediction_score": 0.47593500000000005,
+    "max_prediction_score": 0.60938,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 9893640,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000018.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 66735920,
+    "file_name": "raw_data/images/chicken/2025-11-21-chicken-000013 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 67,
+    "avg_prediction_score": 0.780958656716418,
+    "max_prediction_score": 0.88672,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 339728026,
+    "file_name": "raw_data/images/chicken/2025-11-13-chicken-000013.jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 946272864,
+    "file_name": "raw_data/images/chicken/2025-11-11-chicken-000042 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 128,
+    "avg_prediction_score": 0.79008453125,
+    "max_prediction_score": 0.91406,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 985319500,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000036 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 375332994,
+    "file_name": "raw_data/images/chicken/2025-11-14-chicken-000034 (3).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 615300634,
+    "file_name": "raw_data/images/chicken/2025-10-31-chicken-000019 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 589510768,
+    "file_name": "raw_data/images/chicken/2025-11-03-chicken-000011 (1).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 19,
+    "avg_prediction_score": 0.4308189473684211,
+    "max_prediction_score": 0.61719,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 4881404,
+    "file_name": "raw_data/images/chicken/2025-11-05-chicken-000010 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 112,
+    "avg_prediction_score": 0.4635716964285714,
+    "max_prediction_score": 0.60156,
+    "is_positive": false,
+    "is_negative": true
+  },
+  {
+    "image_id": 48852569,
+    "file_name": "raw_data/images/chicken/2025-11-04-chicken-000032 (2).jpg",
+    "num_gt_annotations": 0,
+    "num_predictions": 0,
+    "avg_prediction_score": 0.0,
+    "max_prediction_score": 0.0,
+    "is_positive": false,
+    "is_negative": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "total_positive_images": 0,
+  "positive_images_with_detections": 0,
+  "positive_images_without_detections": 0,
+  "total_gt_annotations": 0,
+  "total_predictions_on_positive": 0,
+  "false_negative_images": [],
+  "avg_detections_per_positive_image": 0.0,
+  "avg_gt_annotations_per_positive_image": 0.0
+}
